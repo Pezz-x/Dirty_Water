@@ -1,3 +1,26 @@
+/* Major Colors and fonts */
+:root {
+    --primary-color: #347881;
+    --secondary-color: #013948;
+    --light-font-color: #fafafa;
+    --dark-font-color: #333;
+
+}
+
 body {
-    background: aqua;
+    background-color: var(--primary-color);
+    color: var(--dark-font-color);
+}
+
+nav, footer {
+    background-color: var(--secondary-color);
+    color: var(--light-font-color);
+}
+
+#hero {
+    background-image: url('../images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
 }
