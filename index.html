@@ -11,11 +11,12 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="assets/css/styles.css" />
+        <script type="module" src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"></script>
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+        <nav id="navbar" class="navbar navbar-expand-lg">
+            <div class="container">
                 <a class="navbar-brand" href="#">Dirty Water</a>
                 <button
                 class="navbar-toggler"
@@ -44,18 +45,22 @@
         </nav>
 
         <!-- Hero Section -->
-        <section id="hero" class="text-center py-5">
+        <section id="hero" class="text-center py-5 d-flex align-items-center">
             <div class="container">
-                <h1>Dirty Water</h1>
-                <p class="lead">Hero text goes here</p>
+                <h1 class="display-1">Dirty Water</h1>
+                <p class="lead pt-2">Hero text goes here</p>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-5">
-            <div class="container">
-                <h2>About</h2>
+        <section id="about" class="pt-5">
+            <div class="container text-center py-3">
+                <h2 class="display-4">About</h2>
                 <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -63,20 +68,17 @@
         </section>
 
         <!-- Map Section -->
-        <section id="map" class="py-5">
-            <div class="container text-center">
-                <h2>Map</h2>
-                <div
-                class="placeholder-image bg-secondary mx-auto"
-                style="width: 100%; height: 300px"
-                ></div>
+        <section id="map" class="py-5 display-3">
+            <div class="container-fluid text-center d-flex flex-column justify-content-center align-items-center">
+                <h2 class="display-4">Map</h2>
+                <arcgis-embedded-map style="height:600px; width:90%;" item-id="f25922aebb7f480f8805f080d67eabd6" theme="dark" bookmarks-enabled heading-enabled legend-enabled information-enabled portal-url="https://pyran.maps.arcgis.com/" ></arcgis-embedded-map>
             </div>
         </section>
 
         <!-- FAQ Section -->
         <section id="faq" class="py-5">
             <div class="container">
-                <h2>FAQs</h2>
+                <h2 class="display-4">FAQs</h2>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -87,7 +89,7 @@
         <!-- Contact Section -->
         <section id="contact" class="py-5">
             <div class="container">
-                <h2>Contact</h2>
+                <h2 class="display 4">Contact</h2>
                 <form>
                     <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Name" />
@@ -108,7 +110,7 @@
         </section>
 
         <!-- Footer Section -->
-        <footer class="bg-light py-3">
+        <footer id="footer" class="py-4">
             <div class="container text-center">
                 <p>&copy; 2023 Dirty Water. All rights reserved.</p>
                 <p>

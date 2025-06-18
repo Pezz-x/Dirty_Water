@@ -4,18 +4,26 @@
     --secondary-color: #013948;
     --light-font-color: #fafafa;
     --dark-font-color: #333;
+    --light-blue-color: #61979E;
 
 }
 
+.display-4 {
+    font-weight: bold;
+}
 body {
     background-color: var(--primary-color);
     color: var(--dark-font-color);
 }
 
-nav, footer {
+#navbar, #footer {
     background-color: var(--secondary-color);
     color: var(--light-font-color);
 }
+#navbar * {
+    color: var(--light-blue-color);
+}
+
 
 #hero {
     background-image: url('../images/hero-image.jpg');
@@ -23,4 +31,12 @@ nav, footer {
     background-position: center;
     background-repeat: no-repeat;
     height: 50vh;
+}
+#hero h1 {
+    font-weight: bold;
+
+}
+#about .container {
+    background-color: var(--light-blue-color);
+    border-radius: 10%;
 }
