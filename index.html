@@ -52,8 +52,57 @@
 
         <!-- Registration Modal -->
         <section id="registration" class="pt-5 container d-flex justify-content-center">
-            <!-- Button to trigger Modal -->
-            <button id="modal-button" type="button" class="btn btn-warning">Register for Updates</button>
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Register for updates
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Keep updated on sewage discharge in your area.</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body mb-0">
+                            <div class="container-fluid">
+                                <form action="" method="GET" class="d-flex flex-column justify-content-center align-items-center">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="title" class="form-label pt-2">Title</label>
+                                            <select class="form-select mb-2" name="title" id="title" aria-required="false">
+                                                <option value="Mr">Mr</option>
+                                                <option value="Mrs">Mrs</option>
+                                                <option value="Ms">Ms</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="first-name" class="form-label">First Name</label>
+                                            <input class="form-control mb-2" id="first-name" name="first-name" type="text" required aria-required="true">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="name" class="form-label">Last Name</label>
+                                            <input class="form-control mb-2" id="last-name" name="last-name" type="text" required aria-required="true">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input class="form-control mb-2" id="email" name="email" type="email" required aria-required="true">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline-secondary mt-2" type="submit">Submit!</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
             <!-- Modal -->
 
@@ -74,27 +123,14 @@
     </section>
 
 
-    <!-- Plan B embedded arcgis Map Section -->
-    <!--
-    <section id="map" class="py-5 display-3">
-        <div class="container-fluid text-center d-flex flex-column justify-content-center align-items-center">
-            <h2 class="display-4">Map</h2>
-            <arcgis-embedded-map style="height:600px; width:90%;" item-id="f25922aebb7f480f8805f080d67eabd6"
-                theme="dark" bookmarks-enabled heading-enabled legend-enabled information-enabled
-                portal-url="https://pyran.maps.arcgis.com/"></arcgis-embedded-map>
-        </div>
-    </section>
-    -->
-
     <!-- Google Map Section -->
-    <section>
+    <section class="container">
         <div id="map"></div>
 
         <!-- Load Google Maps API -->
             <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
             <!-- Replace YOUR_API_KEY with your actual Google Maps API key. -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn_zFu8ZkbfPgSIjZfFsnC2tjJKTibZ2I&callback=initMap" async defer></script>
-
     </section>
 
     <!-- Take Action Section -->
