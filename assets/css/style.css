@@ -1,11 +1,17 @@
-/* Major Colors and fonts */
+/* General styling */
 :root {
     --primary-color: #347881;
     --secondary-color: #013948;
     --light-font-color: #fafafa;
     --dark-font-color: #333;
     --light-blue-color: #61979E;
+}
 
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .display-4 {
@@ -16,6 +22,7 @@ body {
     color: var(--dark-font-color);
 }
 
+/* Navbar Styling */
 #navbar, #footer {
     background-color: var(--secondary-color);
     color: var(--light-font-color);
@@ -24,7 +31,7 @@ body {
     color: var(--light-blue-color);
 }
 
-
+/* Hero Section */
 #hero {
     background-image: url('../images/hero-image.jpg');
     background-size: cover;
@@ -36,9 +43,24 @@ body {
     font-weight: bold;
 
 }
+
+/* About section */
 #about .container {
     background-color: var(--light-blue-color);
     border-radius: 10%;
+}
+
+/* Map Section */
+#map-placeholder {
+    width: 100%;
+    height: 600px;
+    background-color: var(--dark-font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#map-placeholder p {
+    color: var(--light-font-color);
 }
 
 /* Footer */
