@@ -1,3 +1,77 @@
+/* Major Colors and fonts */
+:root {
+    --primary-color: #347881;
+    --secondary-color: #013948;
+    --light-font-color: #fafafa;
+    --dark-font-color: #333;
+    --light-blue-color: #61979E;
+
+}
+
+.display-4 {
+    font-weight: bold;
+}
 body {
-    background: aqua;
+    background-color: var(--primary-color);
+    color: var(--dark-font-color);
+}
+
+#navbar, #footer {
+    background-color: var(--secondary-color);
+    color: var(--light-font-color);
+}
+#navbar * {
+    color: var(--light-blue-color);
+}
+
+
+#hero {
+    background-image: url('../images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+#hero h1 {
+    font-weight: bold;
+
+}
+#about .container {
+    background-color: var(--light-blue-color);
+    border-radius: 10%;
+}
+
+/* Footer */
+/* Override Bootstrap styling which was preventing copyright info and social links spacing */
+#footer .row > * {
+    flex-shrink: 1;
+    width: auto;
+}
+.footer-text {
+    color: var(--light-blue-color);
+}
+.header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.copyright {
+    font-size: small;
+}
+
+/* Enable layout styling of social links */
+#footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    min-width: 10rem;
+}
+
+/* Style social links */
+#footer ul a {
+    color: var(--light-blue-color);
+    font-size: 2rem;
 }
