@@ -1,19 +1,29 @@
+
+
 /* Major Colors and fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --primary-color: #347881;
     --secondary-color: #013948;
     --light-font-color: #fafafa;
     --dark-font-color: #333;
     --light-blue-color: #61979E;
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Lexend', sans-serif;
 
 }
 
+
 .display-4 {
     font-weight: bold;
+    font-family: var(--secondary-font)
 }
 body {
     background-color: var(--primary-color);
     color: var(--dark-font-color);
+    font-family;: var(--primary-font)
 }
 
 #navbar, #footer {
@@ -33,12 +43,19 @@ body {
     height: 50vh;
 }
 #hero h1 {
+    font-family: var(--secondary-font);
     font-weight: bold;
 
 }
 #about .container {
     background-color: var(--light-blue-color);
     border-radius: 10%;
+}
+
+.standout-section {
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Optional: subtle shadow */
 }
 
 /* Footer */
