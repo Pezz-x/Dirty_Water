@@ -40,3 +40,38 @@ body {
     background-color: var(--light-blue-color);
     border-radius: 10%;
 }
+
+/* Footer */
+/* Override Bootstrap styling which was preventing copyright info and social links spacing */
+#footer .row > * {
+    flex-shrink: 1;
+    width: auto;
+}
+.footer-text {
+    color: var(--light-blue-color);
+}
+.header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.copyright {
+    font-size: small;
+}
+
+/* Enable layout styling of social links */
+#footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    min-width: 10rem;
+}
+
+/* Style social links */
+#footer ul a {
+    color: var(--light-blue-color);
+    font-size: 2rem;
+}
