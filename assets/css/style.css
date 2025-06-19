@@ -78,11 +78,27 @@ body {
     line-height: 1.2;
 }
 
+/* GOOGLE MAP*/
+/*#############################################################*/
 #map {
-      height: 100vh;
+      height: 80vh;
       width: 100%;
       z-index: 10;
     }
+
+/* Shared marker style */
+.custom-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: grey;
+  border: 2px solid white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/*#############################################################*/
+
 
 .copyright {
     font-size: small;
