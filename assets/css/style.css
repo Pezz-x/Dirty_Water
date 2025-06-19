@@ -50,18 +50,6 @@ body {
     border-radius: 10%;
 }
 
-/* Map Section */
-#map-placeholder {
-    width: 100%;
-    height: 600px;
-    background-color: var(--dark-font-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#map-placeholder p {
-    color: var(--light-font-color);
-}
 
 /* Footer */
 /* Override Bootstrap styling which was preventing copyright info and social links spacing */
@@ -81,9 +69,12 @@ body {
 /* GOOGLE MAP*/
 /*#############################################################*/
 #map {
-      height: 80vh;
-      width: 100%;
-      z-index: 10;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
     }
 
 /* Shared marker style */
