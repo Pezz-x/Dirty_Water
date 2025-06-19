@@ -5,13 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dirty Water</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
     <script>
         const queryUrl =
             "https://services-eu1.arcgis.com/OMdMOtfhATJPcHe3/arcgis/rest/services/NEH_outlets_PROD/FeatureServer/0/query?where=1%3D1&outFields=statusStart,latestEventStart,latestEventEnd,receivingWaterCourse,lastUpdated,ID,status,longitude,latitude&geometry=&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outSR=4326&f=json";
     </script>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Styles sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <script type="module"
         src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"></script>
 </head>
@@ -63,7 +65,9 @@
         </div>
     </section>
 
-    <!-- Map Section -->
+    
+    <!-- Plan B embedded arcgis Map Section -->
+    <!--
     <section id="map" class="py-5 display-3">
         <div class="container-fluid text-center d-flex flex-column justify-content-center align-items-center">
             <h2 class="display-4">Map</h2>
@@ -71,6 +75,18 @@
                 theme="dark" bookmarks-enabled heading-enabled legend-enabled information-enabled
                 portal-url="https://pyran.maps.arcgis.com/"></arcgis-embedded-map>
         </div>
+    </section>
+    -->
+
+    <!-- Google Map Section -->
+    <section>
+        <div id="map"></div>
+
+        <!-- Load Google Maps API -->
+            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+            <!-- Replace YOUR_API_KEY with your actual Google Maps API key. -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn_zFu8ZkbfPgSIjZfFsnC2tjJKTibZ2I&callback=initMap" async defer></script>
+        
     </section>
 
     <!-- FAQ Section -->
@@ -133,14 +149,16 @@
         </div>
     </footer>
 
-    <!-- Bootstrap Link` -->
+    <!-- Bootstrap Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <!-- Font Awesome Link -->
     <script src="https://kit.fontawesome.com/9199489a36.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE MAP Script-->
+     <script src="./assets/js/script.js"></script>
 </body>
-`
+
 
 </html>
-``
+
