@@ -49,18 +49,36 @@ async function initMap() {
                 });
 
                 marker.addListener("click", () => {
+                    function formatUTC(utcString) {
+                        if (!utcString) return "N/A";
+                        const date = new Date(utcString);
+                        if (isNaN(date)) return utcString;
+                        const pad = (n) => n.toString().padStart(2, "0");
+                        return `${pad(date.getHours())}:${pad(
+                            date.getMinutes()
+                        )}:${pad(date.getSeconds())} ${pad(
+                            date.getDate()
+                        )}/${pad(date.getMonth() + 1)}/${date.getFullYear()}`;
+                    }
+
                     infoWindow.setContent(`
-                        <div>
-                          <b>Outlet ID:</b> ${attrs.ID}<br>
-                          <b>Status:</b> ${attrs.status}<br>
-                          <b>Status Start:</b> ${attrs.statusStart}<br>
-                          <b>Latest Event Start:</b> ${attrs.latestEventStart}<br>
-                          <b>Latest Event End:</b> ${attrs.latestEventEnd}<br>
-                          <b>Receiving Water Course:</b> ${attrs.receivingWaterCourse}<br>
-                          <b>Last Updated:</b> ${attrs.lastUpdated}<br>
-                          <b>Longitude:</b> ${attrs.longitude}<br>
-                          <b>Latitude:</b> ${attrs.latitude}
-                        </div>
+                      <div>
+                        <b>Outlet ID:</b> ${attrs.ID}<br>
+                        <b>Status:</b> ${attrs.status}<br>
+                        <b>Status Start:</b> ${formatUTC(attrs.statusStart)}<br>
+                        <b>Latest Event Start:</b> ${formatUTC(
+                            attrs.latestEventStart
+                        )}<br>
+                        <b>Latest Event End:</b> ${formatUTC(
+                            attrs.latestEventEnd
+                        )}<br>
+                        <b>Receiving Water Course:</b> ${
+                            attrs.receivingWaterCourse
+                        }<br>
+                        <b>Last Updated:</b> ${formatUTC(attrs.lastUpdated)}<br>
+                        <b>Longitude:</b> ${attrs.longitude}<br>
+                        <b>Latitude:</b> ${attrs.latitude}
+                      </div>
                     `);
                     infoWindow.open(map, marker);
                 });
