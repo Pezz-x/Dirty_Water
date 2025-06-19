@@ -43,6 +43,22 @@ body {
     font-weight: bold;
 
 }
+/* Modal Styling */
+.modal-header {
+    background-color: var(--secondary-color);
+    color: var(--light-blue-color);;
+}
+.modal-body {
+    background-color: var(--light-blue-color);
+    color: var(--dark-font-color);
+}
+.modal-body input, .modal-body select {
+    background-color: rgba(242, 242, 124, 0.622);
+}
+.modal-footer {
+    background-color: var(--secondary-color);
+    color: var(--light-blue-color);
+}
 
 /* About section */
 #about .container {
