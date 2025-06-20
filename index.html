@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script type="module"
         src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"></script>
+    <link rel="icon" href="assets/js/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -42,83 +43,90 @@
         </div>
     </nav>
 
-        <!-- Hero Section -->
-        <section id="hero" class="text-center py-5 d-flex align-items-center">
-            <div class="container">
-                <h1 class="display-1">Dirty Water</h1>
-                <p class="lead pt-2">Hero text goes here</p>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section id="hero" class="text-center py-5 d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-1">Dirty Water</h1>
+            <p class="lead pt-2">Hero text goes here</p>
+        </div>
+    </section>
 
-        <!-- Registration Modal -->
-        <section id="registration" class="pt-5 container d-flex justify-content-center">
+    <!-- Registration Modal -->
+    <section id="registration" class="pt-5 container d-flex justify-content-center">
 
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Register for updates
-            </button>
+        </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Keep updated on sewage discharge in your area.</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body mb-0">
-                            <div class="container-fluid">
-                                <form action="" method="GET" class="d-flex flex-column justify-content-center align-items-center">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <label for="title" class="form-label pt-2">Title</label>
-                                            <select class="form-select mb-2" name="title" id="title" aria-required="false">
-                                                <option value="Mr">Mr</option>
-                                                <option value="Mrs">Mrs</option>
-                                                <option value="Ms">Ms</option>
-                                                <option value="Other">Other</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-6">
-                                            <label for="first-name" class="form-label">First Name</label>
-                                            <input class="form-control mb-2" id="first-name" name="first-name" type="text" required aria-required="true">
-                                        </div>
-                                        <div class="col-6">
-                                            <label for="name" class="form-label">Last Name</label>
-                                            <input class="form-control mb-2" id="last-name" name="last-name" type="text" required aria-required="true">
-                                        </div>
-                                        <div class="col-12">
-                                            <label for="email" class="form-label">Email</label>
-                                            <input class="form-control mb-2" id="email" name="email" type="email" required aria-required="true">
-                                        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Keep updated on sewage discharge
+                            in your area.</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body mb-0">
+                        <div class="container-fluid">
+                            <form action="" method="GET"
+                                class="d-flex flex-column justify-content-center align-items-center">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="title" class="form-label pt-2">Title</label>
+                                        <select class="form-select mb-2" name="title" id="title" aria-required="false">
+                                            <option value="Mr">Mr</option>
+                                            <option value="Mrs">Mrs</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Other">Other</option>
+                                        </select>
                                     </div>
-                                    <button class="btn btn-outline-secondary mt-2" type="submit">Submit!</button>
-                                </form>
-                            </div>
+                                    <div class="col-6">
+                                        <label for="first-name" class="form-label">First Name</label>
+                                        <input class="form-control mb-2" id="first-name" name="first-name" type="text"
+                                            required aria-required="true">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="name" class="form-label">Last Name</label>
+                                        <input class="form-control mb-2" id="last-name" name="last-name" type="text"
+                                            required aria-required="true">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input class="form-control mb-2" id="email" name="email" type="email" required
+                                            aria-required="true">
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-secondary mt-2" type="submit">Submit!</button>
+                            </form>
                         </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-        </section>
-            <!-- Modal -->
-
+        </div>
+    </section>
+    <!-- Modal -->
 
     <!-- About Section -->
-    <section id="about" class="pt-5">
+    <section id="intro" class="text-center py-5 d-flex align-items-center" aria-label="Why Water Quality Matters">
         <div class="container text-center py-3">
-            <h2 class="display-4">About</h2>
+            <h2>Why keep an eye on the water?</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Rivers and seas should be playgrounds, not health gambles. But companies are releasing untreated
+                waste straight into waterways at an unprecedented rate. Combined with
+                agricultural runoff and micro-plastics, it is harming wildlife and human health alike.
+                <strong>Dirty Water</strong> is here to help you navigate these waters safely.
             </p>
+            <p>
+                Our map layers live discharge alerts so you can decide whether today’s a splash-about day or a
+                stay-on-shore day.
+            </p>
+
         </div>
     </section>
 
@@ -141,9 +149,11 @@
         <div id="map"></div>
 
         <!-- Load Google Maps API -->
-            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
-            <!-- Replace YOUR_API_KEY with your actual Google Maps API key. -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn_zFu8ZkbfPgSIjZfFsnC2tjJKTibZ2I&callback=initMap" async defer></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+        <!-- Replace YOUR_API_KEY with your actual Google Maps API key. -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn_zFu8ZkbfPgSIjZfFsnC2tjJKTibZ2I&callback=initMap"
+            async defer></script>
     </section>
 
     <!-- Take Action Section -->
@@ -162,39 +172,49 @@
         <div class="container">
             <h2 class="display-4">FAQs</h2>
             <div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        1. Can I still swim or surf after a sewage discharge?
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">It’s not recommended. Bacteria levels can be dangerously high for up to 48–72 hours after a discharge. You risk exposure to pathogens 
-        that can cause ear infections, stomach upsets, and more serious illnesses.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        2. Is it legal for South West Water to dump sewage into the sea?
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Yes, — sadly under current UK law, water companies are permitted to discharge untreated wastewater during heavy rainfall events.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        3. How often does South West Water release sewage?
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">South West Water report thousands of storm overflow events. While there is ongoing work to reduce them, 
-        many locations still see hundreds of discharges each year.</div>
-    </div>
-  </div>
-</div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            1. Can I still swim or surf after a sewage discharge?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">It’s not recommended. Bacteria levels can be dangerously high for up
+                            to 48–72 hours after a discharge. You risk exposure to pathogens
+                            that can cause ear infections, stomach upsets, and more serious illnesses.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            2. Is it legal for South West Water to dump sewage into the sea?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Yes, — sadly under current UK law, water companies are permitted to
+                            discharge untreated wastewater during heavy rainfall events.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            3. How often does South West Water release sewage?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">South West Water report thousands of storm overflow events. While
+                            there is ongoing work to reduce them,
+                            many locations still see hundreds of discharges each year.</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -255,9 +275,8 @@
     <script src="https://kit.fontawesome.com/9199489a36.js" crossorigin="anonymous"></script>
     <!-- GOOGLE MAP Script-->
     <script src="./assets/js/script.js"></script>
-    
+
 </body>
 
 
 </html>
-
