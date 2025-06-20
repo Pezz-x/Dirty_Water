@@ -7,9 +7,9 @@
     --secondary-color: #013948;
     --light-font-color: #fafafa;
     --dark-font-color: #333;
-    --light-blue-color: #61979E;
-    --primary-font: 'Montserrat', sans-serif;
-    --secondary-font: 'Lexend', sans-serif;
+    --light-blue-color: #61979e;
+    --primary-font: "Montserrat", sans-serif;
+    --secondary-font: "Lexend", sans-serif;
 }
 
 /* Reset default styles */
@@ -88,8 +88,6 @@ body {
     background-color: var(--light-font-color);
 }
 
-
-
 .table-container .fw-bold {
     font-weight: bold;
 }
@@ -106,8 +104,6 @@ body {
     border: 2px solid black;
     background-color: var(--light-font-color);
 }
-
-
 
 .table-container .fw-bold {
     font-weight: bold;
