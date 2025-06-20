@@ -63,9 +63,9 @@ async function initMap() {
 
                     infoWindow.setContent(`
             <div>
-              <b>Status -1= offline 0= not pumping 1=pumping :</b> ${
+              <b>Status:</b> ${
                   attrs.status
-              }<br>
+              } (offline=-1 not pumping=0 pumping=1)<br>
               <b>Latest Release Started:</b> ${formatUTC(
                   attrs.latestEventStart
               )}<br>
