@@ -136,26 +136,26 @@
         </div>
     </section>
 
-    <!-- Warning Section -->
-    <section id="about" class="pt-5">
-        <div class="container text-center py-3">
-            <h6 class="display-4">Important: This Map Won’t Warn You About Water Safety Risks</h6>
-            <p>
-                It’s important to note that this map doesn’t indicate whether the water is safe This map, the Sewage
-                Map, is not an alert service. It shows the operational status of sewage overflows across the country,
-                but it doesn’t provide enough context to help you assess whether it’s safe to enter the water. While it
-                tells you where sewage overflows are, it doesn’t show exactly how the discharge may affect water quality
-                or pose a risk to human health.
-            </p>
-            <p>
+        <!-- Warning Section -->
+        <section id="about" class="text-center py-5 d-flex align-items-center" aria-label="Important map disclaimer">
+            <div class="container text-center py-3 mb-auto">
+                <h3>Important: This Map Won’t Warn You About Water Safety Risks</h3>
+                <p>
+                    It’s important to note that this map doesn’t indicate whether the water is safe.
+                    This map, the Sewage Map, is not an alert service. It shows the operational status of sewage
+                    overflows across the
+                    country, but it doesn’t provide enough context to help you assess whether it’s safe to enter the
+                    water.
+                    While it tells you where sewage overflows are, it doesn’t show exactly how the discharge may affect
+                    water quality or pose a risk to human health.
+                </p>
+            </div>
+        </section>
 
-            </p>
-        </div>
-    </section>
-
-    <!-- Google Map Section -->
-    <section class="container">
-        <div id="map"></div>
+        <!-- Google Map Section -->
+        <section id="mapContainer" class="container py-5 d-flex align-items-center"
+            aria-label="Map showing sewage overflow locations">
+            <div id="map"></div>
 
             <!-- Load Google Maps API -->
             <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
@@ -165,10 +165,10 @@
                 async defer></script>
         </section>
 
-        <!-- Take Action Section -->
-        <section id="take-action" class="py-5 standout-section">
-            <div class="container text-center">
-                <h2 class="display-4">Take Action</h2>
+        <!--NB SHOULD THIS NOT BE A BUTTON OR MODAL?! Take Action Section -->
+        <section id="take-action" class="text-center py-5 d-flex align-items-center" aria-label="take action">
+            <div class="container text-center py-3 mb-auto">
+                <h3>Take Action</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -177,9 +177,9 @@
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq" class="py-5">
-            <div class="container">
-                <h2 class="display-4">FAQs</h2>
+        <section id="faq" class="text-center py-5 d-flex align-items-center" aria-label="Important map disclaimer">
+            <div class="container text-center py-3 mb-auto">
+                <h3>FAQs</h3>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
