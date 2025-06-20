@@ -66,6 +66,25 @@ body {
     border-radius: 10%;
 }
 
+/* Tide Times */
+.table-container {
+    max-width: 100%;
+    margin: 0 auto;
+    /* background-color: #f8f9fa; */
+    /* border: 2px solid black; */
+    /* Light background for table */
+}
+#tide-times .row > * {
+    border: 2px solid black;
+    background-color: var(--light-font-color);
+}
+
+
+
+.table-container .fw-bold {
+    font-weight: bold;
+}
+
 
 /* Footer */
 /* Override Bootstrap styling which was preventing copyright info and social links spacing */
