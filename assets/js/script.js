@@ -1,6 +1,6 @@
 async function initMap() {
-  // Centre on Cornwall
-  const cornwallCenter = { lat: 50.4108, lng: -5.0810 };
+    // Centre on Cornwall
+    const cornwallCenter = { lat: 50.4108, lng: -5.081 };
 
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 9,
@@ -11,23 +11,26 @@ async function initMap() {
     const response = await fetch('https://services-eu1.arcgis.com/OMdMOtfhATJPcHe3/arcgis/rest/services/NEH_outlets_PROD/FeatureServer/0/query?where=1%3D1&outFields=latestEventStart,latestEventEnd,receivingWaterCourse,lastUpdated,ID,status,latitude,statusStart,longitude&outSR=4326&f=json');
     const data = await response.json();
 
-    const features = data.features;
+        const features = data.features;
+        const infoWindow = new google.maps.InfoWindow();
 
-    features.forEach((feature) => {
-      const attrs = feature.attributes;
-      const lat = parseFloat(attrs.latitude);
-      const lng = parseFloat(attrs.longitude);
-      const status = parseInt(attrs.status);
+        features.forEach((feature) => {
+            const attrs = feature.attributes;
+            const lat = parseFloat(attrs.latitude);
+            const lng = parseFloat(attrs.longitude);
+            const status = parseInt(attrs.status);
 
-      if (!isNaN(lat) && !isNaN(lng)) {
-        let color
-        if (status === -1){
-            color = 'grey'
-        } else if (status === 0){
-            color = 'green'
-        } else if (status === 1) {
-            color = 'red'
-        }else {color = 'black'}
+            if (!isNaN(lat) && !isNaN(lng)) {
+                let color;
+                if (status === -1) {
+                    color = "grey";
+                } else if (status === 0) {
+                    color = "green";
+                } else if (status === 1) {
+                    color = "red";
+                } else {
+                    color = "black";
+                }
 
         new google.maps.Marker({
           position: { lat: lat, lng: lng },

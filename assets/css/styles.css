@@ -12,13 +12,7 @@
     --light-blue-color: #61979E;
     --primary-font: 'Montserrat', sans-serif;
     --secondary-font: 'Lexend', sans-serif;
-}
 
-/* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 
@@ -29,10 +23,9 @@
 body {
     background-color: var(--primary-color);
     color: var(--dark-font-color);
-    font-family: var(--primary-font);
+    font-family: var(--primary-font)
 }
 
-/* Navbar Styling */
 #navbar, #footer {
     background-color: var(--secondary-color);
     color: var(--light-font-color);
@@ -41,7 +34,7 @@ body {
     color: var(--light-blue-color);
 }
 
-/* Hero Section */
+
 #hero {
     background-image: url('../images/hero-image.jpg');
     background-size: cover;
@@ -54,65 +47,9 @@ body {
     font-weight: bold;
 
 }
-/* Modal Styling */
-.modal-header {
-    background-color: var(--secondary-color);
-    color: var(--light-blue-color);;
-}
-.modal-body {
-    background-color: var(--light-blue-color);
-    color: var(--dark-font-color);
-}
-.modal-body input, .modal-body select {
-    background-color: rgba(242, 242, 124, 0.622);
-}
-.modal-footer {
-    background-color: var(--secondary-color);
-    color: var(--light-blue-color);
-}
-
-/* About section */
 #about .container {
     background-color: var(--light-blue-color);
     border-radius: 10%;
-}
-
-/* Tide Times */
-.table-container {
-    max-width: 100%;
-    margin: 0 auto;
-    /* background-color: #f8f9fa; */
-    /* border: 2px solid black; */
-    /* Light background for table */
-}
-#tide-times .row > * {
-    border: 2px solid black;
-    background-color: var(--light-font-color);
-}
-
-
-
-.table-container .fw-bold {
-    font-weight: bold;
-}
-
-/* Tide Times */
-.table-container {
-    max-width: 100%;
-    margin: 0 auto;
-    /* background-color: #f8f9fa; */
-    /* border: 2px solid black; */
-    /* Light background for table */
-}
-#tide-times .row > * {
-    border: 2px solid black;
-    background-color: var(--light-font-color);
-}
-
-
-
-.table-container .fw-bold {
-    font-weight: bold;
 }
 
 .standout-section {
@@ -135,31 +72,6 @@ body {
     font-weight: 500;
     line-height: 1.2;
 }
-
-/* GOOGLE MAP*/
-/*#############################################################*/
-#map {
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-    }
-
-/* Shared marker style */
-.custom-marker {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: grey;
-  border: 2px solid white;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-}
-
-
-/*#############################################################*/
-
 
 .copyright {
     font-size: small;
