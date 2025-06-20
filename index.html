@@ -53,8 +53,62 @@
 
     <!-- Registration Modal -->
     <section id="registration" class="pt-5 container d-flex justify-content-center">
-        <!-- Button to trigger Modal -->
-        <button id="modal-button" type="button" class="btn btn-warning">Register for Updates</button>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Register for updates
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Keep updated on sewage discharge
+                            in your area.</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body mb-0">
+                        <div class="container-fluid">
+                            <form action="" method="GET"
+                                class="d-flex flex-column justify-content-center align-items-center">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="title" class="form-label pt-2">Title</label>
+                                        <select class="form-select mb-2" name="title" id="title" aria-required="false">
+                                            <option value="Mr">Mr</option>
+                                            <option value="Mrs">Mrs</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="first-name" class="form-label">First Name</label>
+                                        <input class="form-control mb-2" id="first-name" name="first-name" type="text"
+                                            required aria-required="true">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="name" class="form-label">Last Name</label>
+                                        <input class="form-control mb-2" id="last-name" name="last-name" type="text"
+                                            required aria-required="true">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input class="form-control mb-2" id="email" name="email" type="email" required
+                                            aria-required="true">
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-secondary mt-2" type="submit">Submit!</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Modal -->
 
@@ -76,20 +130,9 @@
         </div>
     </section>
 
-    <!-- Plan B embedded arcgis Map Section -->
-    <!--
-    <section id="map" class="py-5 display-3">
-        <div class="container-fluid text-center d-flex flex-column justify-content-center align-items-center">
-            <h2 class="display-4">Map</h2>
-            <arcgis-embedded-map style="height:600px; width:90%;" item-id="f25922aebb7f480f8805f080d67eabd6"
-                theme="dark" bookmarks-enabled heading-enabled legend-enabled information-enabled
-                portal-url="https://pyran.maps.arcgis.com/"></arcgis-embedded-map>
-        </div>
-    </section>
-    -->
 
     <!-- Google Map Section -->
-    <section id="viewDiv">
+    <section class="container">
         <div id="map"></div>
 
         <!-- Load Google Maps API -->
@@ -98,65 +141,67 @@
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn_zFu8ZkbfPgSIjZfFsnC2tjJKTibZ2I&callback=initMap"
             async defer></script>
-
     </section>
 
-    <!-- 4 ▸ HEALTH TIPS  (actionable, concise) -->
-    <section id="health-tips" class="text-center py-5 d-flex align-items-center" aria-label="Health & Safety Tips">
-        <div class="container">
-            <h2 class="display-4">Health & Safety Tips</h2>
-            <ul>
-                <li>
-                    <strong>72-hour rule:</strong> After heavy rain or a recorded overflow, wait three days before
-                    swimming—most pathogens decline sharply in that window.
-                </li>
-                <li>
-                    <strong>Spot the signs:</strong> Murky water, unusual odours, or floating debris mean step
-                    away (and let us know via the <a href="#report">report form</a>).
-                </li>
-                away (and let us know via the <a href="#report">report form</a>).
-                </li>
-                <li>
-                    <strong>Cover cuts:</strong> Open wounds are VIP entrances for bacteria. Waterproof plasters
-                    are your friends.
-                </li>
-                <li>
-                    <strong>Shower afterwards:</strong> A quick rinse removes potential pathogens before they
-                    reach eyes, ears, or mouth.
-                </li>
-                <li>
-                    <strong>Mind the pups:</strong> Dogs love water but can ingest nasties—carry fresh drinking
-                    water and towel them down post-splash.
-                </li>
-            </ul>
-            <p class="disclaimer">
-                Information provided is for general guidance. If you feel unwell after water contact, ring NHS 111.
+    <!-- Take Action Section -->
+    <section id="take-action" class="py-5 standout-section">
+        <div class="container text-center">
+            <h2 class="display-4">Take Action</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-
+        </div>
     </section>
 
-    <!-- 5 ▸ FURTHER RESOURCES  (trusted, UK-centric) -->
-    <section id="resources" class="text-center py-5 d-flex align-items-cente" aria-label="Further Reading">
-        <div class="container align-text-center">
-            <h2>Want to learn more?</h2>
-            <dl>
-                <dt><a href="https://environment.data.gov.uk/">Environment Agency Open Data</a></dt>
-                <dd>Official bathing-water classifications, discharge permits, and live rainfall gauges.</dd>
-
-                <dt><a href="https://theriverstrust.org/">The Rivers Trust</a></dt>
-                <dd>Campaigns, citizen-science kits, and national Sewage Map.</dd>
-
-                <dt><a href="https://www.sas.org.uk/">Surfers Against Sewage</a></dt>
-                <dd>Beach live-alert app, river action groups, and policy advocacy.</dd>
-
-                <dt><a href="https://www.nhs.uk/conditions/leptospirosis/">NHS – Water-borne illnesses</a></dt>
-                <dd>Symptoms, treatment, and when to seek help.</dd>
-
-                <dt><a
-                        href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1103020/storm-overflows-taskforce-roadmap.pdf">DEFRA
-                        Storm Overflow Roadmap (PDF)</a></dt>
-                <dd>Government plan to tackle combined sewer overflows through 2050.</dd>
-            </dl>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="display-4">FAQs</h2>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            1. Can I still swim or surf after a sewage discharge?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">It’s not recommended. Bacteria levels can be dangerously high for up
+                            to 48–72 hours after a discharge. You risk exposure to pathogens
+                            that can cause ear infections, stomach upsets, and more serious illnesses.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            2. Is it legal for South West Water to dump sewage into the sea?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Yes, — sadly under current UK law, water companies are permitted to
+                            discharge untreated wastewater during heavy rainfall events.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            3. How often does South West Water release sewage?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">South West Water report thousands of storm overflow events. While
+                            there is ongoing work to reduce them,
+                            many locations still see hundreds of discharges each year.</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
