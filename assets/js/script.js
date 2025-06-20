@@ -2,14 +2,16 @@ async function initMap() {
     // Centre on Cornwall
     const cornwallCenter = { lat: 50.4108, lng: -5.081 };
 
-  const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 9,
-    center: cornwallCenter,
-  });
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 9,
+        center: cornwallCenter,
+    });
 
-  try {
-    const response = await fetch('https://services-eu1.arcgis.com/OMdMOtfhATJPcHe3/arcgis/rest/services/NEH_outlets_PROD/FeatureServer/0/query?where=1%3D1&outFields=latestEventStart,latestEventEnd,receivingWaterCourse,lastUpdated,ID,status,latitude,statusStart,longitude&outSR=4326&f=json');
-    const data = await response.json();
+    try {
+        const response = await fetch(
+            "https://services-eu1.arcgis.com/OMdMOtfhATJPcHe3/arcgis/rest/services/NEH_outlets_PROD/FeatureServer/0/query?where=1%3D1&outFields=latestEventStart,latestEventEnd,receivingWaterCourse,lastUpdated,ID,status,latitude,statusStart,longitude&outSR=4326&f=json"
+        );
+        const data = await response.json();
 
         const features = data.features;
         const infoWindow = new google.maps.InfoWindow();
@@ -32,27 +34,66 @@ async function initMap() {
                     color = "black";
                 }
 
-        new google.maps.Marker({
-          position: { lat: lat, lng: lng },
-          map: map,
-          title: `ID: ${attrs.ID}\nStatus: ${attrs.status}`,
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 10,
-            fillColor: color,
-            fillOpacity: 1,
-            strokeWeight: 1,
-            strokeColor: 'black'
-          }
+                const marker = new google.maps.Marker({
+                    position: { lat: lat, lng: lng },
+                    map: map,
+                    title: `ID: ${attrs.ID}\nStatus: ${attrs.status}`,
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: 10,
+                        fillColor: color,
+                        fillOpacity: 1,
+                        strokeWeight: 1,
+                        strokeColor: "black",
+                    },
+                });
+
+                marker.addListener("click", () => {
+                    function formatUTC(utcString) {
+                        if (!utcString) return "N/A";
+                        const date = new Date(utcString);
+                        if (isNaN(date)) return utcString;
+                        const pad = (n) => n.toString().padStart(2, "0");
+                        return `${pad(date.getHours())}:${pad(
+                            date.getMinutes()
+                        )}:${pad(date.getSeconds())} ${pad(
+                            date.getDate()
+                        )}/${pad(date.getMonth() + 1)}/${date.getFullYear()}`;
+                    }
+
+                    infoWindow.setContent(`
+            <div>
+              <b>Outlet ID:</b> ${attrs.ID}<br>
+              <b>Status:</b> ${attrs.status}<br>
+              <b>Status Start:</b> ${formatUTC(attrs.statusStart)}<br>
+              <b>Latest Event Start:</b> ${formatUTC(
+                  attrs.latestEventStart
+              )}<br>
+              <b>Latest Event End:</b> ${formatUTC(attrs.latestEventEnd)}<br>
+              <b>Receiving Water Course:</b> ${attrs.receivingWaterCourse}<br>
+              <b>Last Updated:</b> ${formatUTC(attrs.lastUpdated)}<br>
+              <b>Longitude:</b> ${attrs.longitude}<br>
+              <b>Latitude:</b> ${attrs.latitude}
+            </div>
+          `);
+                    infoWindow.open(map, marker);
+                });
+            }
         });
-      }
-    });
-  } catch (error) {
-    console.error('Error fetching ArcGIS data:', error);
-  }
+    } catch (error) {
+        console.error("Error fetching ArcGIS data:", error);
+    }
 }
 
+// Remove the duplicate initPopUp function and the <script> tag from here.
+// The Google Maps API script should only use the callback parameter to call initMap.
+
 // Tidal Events Data
+
+
+
+
+
 
 // tide.js
 
@@ -271,16 +312,19 @@ const tideData = [{
 
 // Utility: Get current ISO date string like '2025-06-18'
 function getTodayDate() {
-  return new Date().toISOString().split('T')[0];
+    return new Date().toISOString().split("T")[0];
 }
 
 // Utility: Format time nicely
 function formatTime(dateStr) {
-  return new Date(dateStr).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    return new Date(dateStr).toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+    });
 }
 
 function getTideDirection(nextTideType) {
-  return nextTideType === "HighWater" ? "Tide coming in" : "Tide going out";
+    return nextTideType === "HighWater" ? "Tide coming in" : "Tide going out";
 }
 
 function loadTideData() {
@@ -289,11 +333,13 @@ function loadTideData() {
     const today = getTodayDate();
     const todayEvents = tideData.filter(event => event.DateTime.startsWith(today));
 
-    // Get current time
-    const now = new Date();
+        // Get current time
+        const now = new Date();
 
-    // Filter events that are still upcoming today
-    const upcoming = todayEvents.filter(event => new Date(event.DateTime) > now);
+        // Filter events that are still upcoming today
+        const upcoming = todayEvents.filter(
+            (event) => new Date(event.DateTime) > now
+        );
 
     if (upcoming.length === 0) {
       nextTide.textContent = "No upcoming tide events for today.";
@@ -317,4 +363,3 @@ function loadTideData() {
 
 // Run the function
 loadTideData();
-
