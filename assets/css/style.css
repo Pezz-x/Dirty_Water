@@ -1,29 +1,25 @@
-
-
 /* Major Colors and fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
     --primary-color: #347881;
     --secondary-color: #013948;
     --light-font-color: #fafafa;
     --dark-font-color: #333;
-    --light-blue-color: #61979E;
-    --primary-font: 'Montserrat', sans-serif;
-    --secondary-font: 'Lexend', sans-serif;
-
-/* Reset default styles */
+    --light-blue-color: #61979e;
+    --primary-font: "Montserrat", sans-serif;
+    --secondary-font: "Lexend", sans-serif;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 .display-4 {
     font-weight: bold;
-    font-family: var(--secondary-font)
+    font-family: var(--secondary-font);
 }
 body {
     background-color: var(--primary-color);
@@ -32,7 +28,8 @@ body {
 }
 
 /* Navbar Styling */
-#navbar, #footer {
+#navbar,
+#footer {
     background-color: var(--secondary-color);
     color: var(--light-font-color);
 }
@@ -42,7 +39,7 @@ body {
 
 /* Hero Section */
 #hero {
-    background-image: url('../images/hero-image.jpg');
+    background-image: url("../images/hero-image.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,18 +48,18 @@ body {
 #hero h1 {
     font-family: var(--secondary-font);
     font-weight: bold;
-
 }
 /* Modal Styling */
 .modal-header {
     background-color: var(--secondary-color);
-    color: var(--light-blue-color);;
+    color: var(--light-blue-color);
 }
 .modal-body {
     background-color: var(--light-blue-color);
     color: var(--dark-font-color);
 }
-.modal-body input, .modal-body select {
+.modal-body input,
+.modal-body select {
     background-color: rgba(242, 242, 124, 0.622);
 }
 .modal-footer {
@@ -77,10 +74,10 @@ body {
 }
 
 .standout-section {
-  background-color: #fff;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Optional: subtle shadow */
-
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Optional: subtle shadow */
+}
 /* Footer */
 /* Override Bootstrap styling which was preventing copyright info and social links spacing */
 #footer .row > * {
@@ -105,21 +102,19 @@ body {
     align-items: center;
     justify-content: center;
     margin: 20px;
-    }
+}
 
 /* Shared marker style */
 .custom-marker {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: grey;
-  border: 2px solid white;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: grey;
+    border: 2px solid white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
-
 /*#############################################################*/
-
 
 .copyright {
     font-size: small;
