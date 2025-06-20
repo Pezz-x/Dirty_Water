@@ -136,18 +136,21 @@
         </div>
     </section>
 
-    <!-- Warning Section -->
-    <section id="about" class="pt-5">
-        <div class="container text-center py-3">
-            <h6 class="display-4">Important: This Map Won’t Warn You About Water Safety Risks</h6>
-            <p>
-                It’s important to note that this map doesn’t indicate whether the water is safe This map, the Sewage
-                Map, is not an alert service. It shows the operational status of sewage overflows across the country,
-                but it doesn’t provide enough context to help you assess whether it’s safe to enter the water. While it
-                tells you where sewage overflows are, it doesn’t show exactly how the discharge may affect water quality
-                or pose a risk to human health.
-            </p>
-            <p>
+        <!-- Warning Section -->
+        <section id="about" class="text-center py-5 d-flex align-items-center" aria-label="Important map disclaimer">
+            <div class="container text-center py-3 mb-auto">
+                <h3>Important: This Map Won’t Warn You About Water Safety Risks</h3>
+                <p>
+                    It’s important to note that this map doesn’t indicate whether the water is safe.
+                    This map, the Sewage Map, is not an alert service. It shows the operational status of sewage
+                    overflows across the
+                    country, but it doesn’t provide enough context to help you assess whether it’s safe to enter the
+                    water.
+                    While it tells you where sewage overflows are, it doesn’t show exactly how the discharge may affect
+                    water quality or pose a risk to human health.
+                </p>
+            </div>
+        </section>
 
             </p>
         </div>
@@ -178,13 +181,10 @@
             </div>
         </section>
 
-
-        
-
-        <!-- Take Action Section -->
-        <section id="take-action" class="py-5 standout-section">
-            <div class="container text-center">
-                <h2 class="display-4">Take Action</h2>
+        <!--NB SHOULD THIS NOT BE A BUTTON OR MODAL?! Take Action Section -->
+        <section id="take-action" class="text-center py-5 d-flex align-items-center" aria-label="take action">
+            <div class="container text-center py-3 mb-auto">
+                <h3>Take Action</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -193,9 +193,9 @@
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq" class="py-5">
-            <div class="container">
-                <h2 class="display-4">FAQs</h2>
+        <section id="faq" class="text-center py-5 d-flex align-items-center" aria-label="faqs">
+            <div class="container text-center py-3 mb-auto">
+                <h3>FAQs</h3>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -249,9 +249,9 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-5">
-            <div class="container">
-                <h2 class="display 4">Contact</h2>
+        <section id="contact" class="text-center py-5 d-flex align-items-center" aria-label="contact">
+            <div class="container text-center py-3 mb-auto">
+                <h3 class=>Contact</h3>
                 <form>
                     <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Name" />
@@ -268,33 +268,34 @@
         </section>
 
         <!-- Footer Section -->
-        <footer id="footer" class="mt-auto">
-            <div class="container py-4">
+        <footer id="footer" class="text-center py-5 d-flex align-items-center mt-auto"
+            aria-label="Footer with social links and copyright">
+            <div class="container text-center py-3 mb-auto">
                 <div class="row d-flex flex-column flex-md-row justify-content-between align-items-center">
-                    <div class="text-center footer-text">
+                    <div class="footer text-center footer-text mb-auto">
                         <p class="header">Dirty Water</p>
                         <p class="copyright"><em>© Dirty Water</em></p>
                     </div>
-                    <div>
-                        <!-- Social Links -->
-                        <ul class="my-2">
-                            <li>
-                                <a href="https://www.facebook.com"
-                                    aria-label="Visit our Facebook page (opens in a new tab)" target="blank"
-                                    rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com"
-                                    aria-label="Visit our Instagram page (opens in a new tab)" target="blank"
-                                    rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://x.com" aria-label="Visit our X / Twitter page (opens in a new tab)"
-                                    target="blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
-                            </li>
-                        </ul>
+                    <div class="footer row d-flex flex-column flex-md-row justify-content-between align-items-center">
                     </div>
+                    <!-- Social Links -->
+                    <ul class="footer column-gap-2 my-2">
+                        <li>
+                            <a href="https://www.facebook.com" aria-label="Visit our Facebook page (opens in a new tab)"
+                                target="blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com"
+                                aria-label="Visit our Instagram page (opens in a new tab)" target="blank"
+                                rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://x.com" aria-label="Visit our X / Twitter page (opens in a new tab)"
+                                target="blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
             </div>
         </footer>
 
@@ -310,7 +311,6 @@
 
 </html>
 
-crossorigin="anonymous"></script>
 <!-- Font Awesome Link -->
 <script src="https://kit.fontawesome.com/9199489a36.js" crossorigin="anonymous"></script>
 <!-- GOOGLE MAP Script-->
