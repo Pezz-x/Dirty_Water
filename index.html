@@ -135,6 +135,34 @@
 
             </div>
         </section>
+        <!-- Google Map Section -->
+        <section id="mapContainer" class="container py-5 d-flex align-items-center"
+            aria-label="Map showing sewage overflow locations">
+            <div id="map"></div>
+
+            <!-- Load Google Maps API -->
+            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+            <!-- Replace YOUR_API_KEY with your actual Google Maps API key. -->
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn_zFu8ZkbfPgSIjZfFsnC2tjJKTibZ2I&callback=initMap"
+                async defer></script>
+        </section>
+
+        <!-- Tide Section -->
+        <section id="tide-times" class="text-center py-5 d-flex align-items-center" aria-label="tide times">
+            <div class="container text-center py-3 mb-auto">
+                <div class="container d-flex justify-content-center">
+                    <div class="table-container col-8">
+                        <div class="row text-center py-2">
+                            <div class="col-12 fw-bold py-2">Cornwall Tide Times:</div>
+                            <div id="next-tide" class="col-6 py-2"></div>
+                            <div id="tide-after-next" class="col-6 py-2"></div>
+                            <div id="tide-status" class="col-12 py-2"></div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
 
         <!-- Warning Section -->
         <section id="about" class="text-center py-5 d-flex align-items-center" aria-label="Important map disclaimer">
@@ -154,34 +182,6 @@
 
         </p>
         </div>
-    </section>
-
-    <!-- Google Map Section -->
-    <section id="mapContainer" class="container py-5 d-flex align-items-center"
-        aria-label="Map showing sewage overflow locations">
-        <div id="map"></div>
-
-        <!-- Load Google Maps API -->
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
-        <!-- Replace YOUR_API_KEY with your actual Google Maps API key. -->
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn_zFu8ZkbfPgSIjZfFsnC2tjJKTibZ2I&callback=initMap"
-            async defer></script>
-    </section>
-
-    <!-- Tide Section -->
-    <section id="tide-times" class="text-center py-5 d-flex align-items-center" aria-label="tide times">
-        <div class="container text-center py-3 mb-auto">
-            <div class="container d-flex justify-content-center">
-                <div class="table-container col-8">
-                    <div class="row text-center py-2">
-                        <div class="col-12 fw-bold py-2">Cornwall Tide Times:</div>
-                        <div id="next-tide" class="col-6 py-2"></div>
-                        <div id="tide-after-next" class="col-6 py-2"></div>
-                        <div id="tide-status" class="col-12 py-2"></div>
-                    </div>
-                </div>
-            </div>
     </section>
 
     <!--NB SHOULD THIS NOT BE A BUTTON OR MODAL?! Take Action Section -->
