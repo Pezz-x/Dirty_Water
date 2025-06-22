@@ -28,8 +28,12 @@
 }
 body {
     background-color: var(--primary-color);
-    color: var(--dark-font-color);
+    color: var(--light-font-color);
     font-family: var(--primary-font);
+}
+
+p {
+    color: var(--light-font-color);
 }
 
 /* Navbar Styling */
