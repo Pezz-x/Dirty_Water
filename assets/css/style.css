@@ -58,6 +58,7 @@ p {
     font-family: var(--secondary-font);
     font-weight: bold;
     color: var(--light-font-color);
+    background-color: transparent;
 }
 /* Modal Styling */
 .modal-header {
