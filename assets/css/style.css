@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--secondary-color);
 }
 
 .display-4 {
@@ -152,6 +153,7 @@ body {
 
 /*#############################################################*/
 /* Flip Card Styles */
+
 .flip-card {
     perspective: 1000px;
     height: 100%;
@@ -220,3 +222,5 @@ body {
     color: wheat;
     font-size: 2rem;
 }
+
+/*test style*/
