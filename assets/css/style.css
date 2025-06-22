@@ -5,8 +5,10 @@
 :root {
     --primary-color: #347881;
     --secondary-color: #013948;
-    --light-font-color: #fafafa;
+    --light-font-color: wheat;
+    --secondary-light-font-color: #fafafa;
     --dark-font-color: #333;
+    --secondary-dark-font-color: wheat;
     --light-blue-color: #61979e;
     --primary-font: "Montserrat", sans-serif;
     --secondary-font: "Lexend", sans-serif;
@@ -26,8 +28,12 @@
 }
 body {
     background-color: var(--primary-color);
-    color: var(--dark-font-color);
+    color: var(--light-font-color);
     font-family: var(--primary-font);
+}
+
+p {
+    color: var(--light-font-color);
 }
 
 /* Navbar Styling */
@@ -37,7 +43,7 @@ body {
     color: var(--light-font-color);
 }
 #navbar * {
-    color: var(--light-blue-color);
+    color: var(--light-font-color);
 }
 
 /* Hero Section */
@@ -51,6 +57,7 @@ body {
 #hero h1 {
     font-family: var(--secondary-font);
     font-weight: bold;
+    color: var(--light-font-color);
 }
 /* Modal Styling */
 .modal-header {
