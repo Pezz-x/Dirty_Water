@@ -1,4 +1,4 @@
-var key = config.KEY;
+//var key = config.KEY;
 
 async function initMap() {
     // Centre on Cornwall
