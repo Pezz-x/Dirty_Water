@@ -128,16 +128,15 @@
         </div>
     </section>
 
-    <!-- Warning Section -->
-    <section id="info" class=" container pb-3 d-flex align-items-center" aria-label="Important map disclaimer">
-        <div class="col-lg-11 py-3 mx-auto">
-            <h3>Important:</h3>
-            <p>
-                This map displays shows the status of sewage overflows across Cornwall. It does not indicate
-                water-safety. To be used for educational purposes only.
-            </p>
-        </div>
-    </section>
+        <!-- Warning Section -->
+        <section id="warning" class="container d-flex align-items-center" aria-label="Important map disclaimer">
+            <div class="col-lg-11 mx-auto">
+                <h3>Important:</h3>
+                <p>
+                    This map displays shows the status of sewage overflows across Cornwall. It does not indicate water-safety. To be used for educational purposes only.
+                </p>
+            </div>
+        </section>
 
     <!-- Google Map Section -->
     <section id="mapContainer" class="container d-flex align-items-center"
@@ -171,88 +170,86 @@
       The "Take Action" section intentionally uses flip cards to draw attention and encourage user interaction with action items.
       This distinct interaction pattern is used to highlight important resources and is consistent with the site's goal of promoting engagement.
     -->
-    <section id="take-action" aria-label="take action" class="pb-5">
-        <div class="container">
-            <h3 class="text-center">~ Take Action ~</h3>
-            <p class="text-center mb-4">
-                Get involved with organizations and campaigns working to improve water quality and protect our
-                rivers
-                and seas. Explore the options below to learn how you can make a difference.
-            </p>
-            <!-- Bootstrap grid: 1 column on xs, 2 on sm, 4 on lg -->
-            <div class="row fill mb-2 row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                <section class="col mb-4">
-                    <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                        <div class="flip-inner card border-primary h-100">
-                            <div class="flip-front card-body">
-                                <h5 class="card-title">Surfers Against Sewage</h5>
-                                <p class="card-text">Campaigning to end sewage discharge and protect coastlines.</p>
-                            </div>
-                            <div class="flip-back card-body text-center">
-                                <p class="card-text">Real-time alerts, plastic reduction, and wild ocean activism.
-                                </p>
-                                <a href="https://www.sas.org.uk/" target="_blank" class="btn btn-primary"
-                                    rel="noopener">Visit
-                                    Site</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="col mb-4">
-                    <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                        <div class="flip-inner card border-primary h-100">
-                            <div class="flip-front card-body">
-                                <h5 class="card-title">The Rivers Trust</h5>
-                                <p class="card-text">Working to protect and restore rivers and their ecosystems.</p>
-                            </div>
-                            <div class="flip-back card-body text-center">
-                                <p class="card-text">A network of river trusts across the UK.</p>
-                                <a href="https://www.theriverstrust.org/" target="_blank" class="btn btn-primary"
-                                    rel="noopener">Visit
-                                    Site</a>
+        <section id="take-action" aria-label="take action" class="pb-5">
+            <div class="container">
+                <h3 class="text-center">Take Action</h3>
+                <p class="text-center mb-4">
+                    Get involved with organizations and campaigns working to improve water quality and protect our
+                    rivers
+                    and seas. Explore the options below to learn how you can make a difference.
+                </p>
+                <!-- Bootstrap grid: 1 column on xs, 2 on sm, 4 on lg -->
+                <div class="row fill mb-2 row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                    <section class="col mb-4">
+                        <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
+                            <div class="flip-inner card border-primary h-100">
+                                <div class="flip-front card-body">
+                                    <h5 class="card-title">Surfers Against Sewage</h5>
+                                    <p class="card-text">Campaigning to end sewage discharge and protect coastlines.</p>
+                                </div>
+                                <div class="flip-back card-body text-center">
+                                    <p class="card-text">Real-time alerts, plastic reduction, and wild ocean activism.
+                                    </p>
+                                    <a href="https://www.sas.org.uk/" target="_blank" class="btn btn-warning" rel="noopener">Visit
+                                        Site</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section class="col mb-4">
-                    <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                        <div class="flip-inner card border-primary h-100">
-                            <div class="flip-front card-body">
-                                <h5 class="card-title">Marine Conservation Society</h5>
-                                <p class="card-text">Protecting marine life and advocating for cleaner seas.</p>
-                            </div>
-                            <div class="flip-back card-body text-center">
-                                <p class="card-text">Join the fight for healthier oceans and coastlines.</p>
-                                <a href="https://www.mcsuk.org/" target="_blank" class="btn btn-primary"
-                                    rel="noopener">Visit
-                                    Site</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="col mb-4">
-                    <div class="card flip-card h-100" onclick="this.classList.toggle('flipped')">
-                        <div class="flip-inner card border-primary h-100">
-                            <div class="flip-front card-body">
-                                <h5 class="card-title">Sewage Campaign Network</h5>
-                                <p class="card-text">Advocating for better sewage treatment and river protection.
-                                </p>
-                            </div>
-                            <div class="flip-back card-body text-center">
-                                <p class="card-text">
-                                    Grassroots coalitions fighting water pollution through activism and citizen
-                                    science.
-                                </p>
-                                <a href="https://www.sewagecampaign.org/" target="_blank" class="btn btn-primary"
-                                    rel="noopener">Visit
-                                    Site</a>
+                    </section>
+                    <section class="col mb-4">
+                        <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
+                            <div class="flip-inner card border-primary h-100">
+                                <div class="flip-front card-body">
+                                    <h5 class="card-title">The Rivers Trust</h5>
+                                    <p class="card-text">Working to protect and restore rivers and their ecosystems.</p>
+                                </div>
+                                <div class="flip-back card-body text-center">
+                                    <p class="card-text">A network of river trusts across the UK.</p>
+                                    <a href="https://www.theriverstrust.org/" target="_blank"
+                                        class="btn btn-warning" rel="noopener">Visit
+                                        Site</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                    <section class="col mb-4">
+                        <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
+                            <div class="flip-inner card border-primary h-100">
+                                <div class="flip-front card-body">
+                                    <h5 class="card-title">Marine Conservation Society</h5>
+                                    <p class="card-text">Protecting marine life and advocating for cleaner seas.</p>
+                                </div>
+                                <div class="flip-back card-body text-center">
+                                    <p class="card-text">Join the fight for healthier oceans and coastlines.</p>
+                                    <a href="https://www.mcsuk.org/" target="_blank" class="btn btn-warning" rel="noopener">Visit
+                                        Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col mb-4">
+                        <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
+                            <div class="flip-inner card border-primary h-100">
+                                <div class="flip-front card-body">
+                                    <h5 class="card-title">Sewage Campaign Network</h5>
+                                    <p class="card-text">Advocating for better sewage treatment and river protection.
+                                    </p>
+                                </div>
+                                <div class="flip-back card-body text-center">
+                                    <p class="card-text">
+                                        Grassroots coalitions fighting water pollution through activism and citizen
+                                        science.
+                                    </p>
+                                    <a href="https://www.sewagecampaign.org/" target="_blank"
+                                        class="btn btn-warning" rel="noopener">Visit
+                                        Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
 
