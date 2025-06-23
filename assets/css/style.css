@@ -81,6 +81,10 @@ p {
 #about > div > div {
     background-color: rgba(51, 51, 51, 0.37);
 }
+/* Warning info section */
+#warning p {
+    margin-bottom: 0;
+}
 /* Map Section */
 #map {
     border: 3px solid black;
@@ -128,6 +132,10 @@ p {
     background-color: #fff;
     padding: 2rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Optional: subtle shadow */
+}
+/* Take Action */
+.card-text {
+    color: var(--secondary-color);
 }
 
 /* FAQ section */
