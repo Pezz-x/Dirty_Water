@@ -47,7 +47,7 @@ p {
 
 /* Hero Section */
 #hero {
-    background-image: url("../images/hero-image1.jpg");
+    background-image: url("../images/hero-image2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -134,6 +134,11 @@ p {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Optional: subtle shadow */
 }
 /* Take Action */
+
+/* Card Height */
+.flip-card {
+    min-height: 220px;
+}
 .card-text {
     color: var(--secondary-color);
 }
