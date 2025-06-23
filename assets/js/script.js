@@ -211,3 +211,29 @@ loadTideData();
 // function toggleDivColor(tideDirection) {
 //   if (tideStatus === )
 // }
+document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+        const form = event.target;
+        const nameInput = form.querySelector('[id="contact-name"]');
+        const userName = nameInput ? nameInput.value : "there";
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            event.preventDefault(); // Prevent actual submission for demo
+            const messageDiv = document.getElementById("contact-message");
+            if (messageDiv) {
+                messageDiv.textContent = `Thanks for your message, ${userName}! We'll get right back to you.`;
+                messageDiv.style.display = "block";
+            } else {
+                alert(
+                    `Thanks ${userName}, for your message! We'll get back to you ASAP.`
+                );
+            }
+            form.reset();
+            form.classList.remove("was-validated");
+            return;
+        }
+        form.classList.add("was-validated");
+    });

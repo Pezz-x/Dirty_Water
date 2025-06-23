@@ -183,7 +183,7 @@
             <div class="row fill mb-2 row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
                 <section class="col mb-4">
                     <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                        <div class="flip-inner card border-primary h-100">
+                        <div class="flip-inner card h-100">
                             <div class="flip-front card-body">
                                 <h5 class="card-title text-center pt-2">Surfers Against Sewage</h5>
                                 <p class="card-text text-center pt-4">Campaigning to end sewage discharge and protect
@@ -202,7 +202,7 @@
                 </section>
                 <section class="col mb-4">
                     <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                        <div class="flip-inner card border-primary h-100">
+                        <div class="flip-inner card  h-100">
                             <div class="flip-front card-body">
                                 <h5 class="card-title text-center pt-2">The Rivers Trust</h5>
                                 <p class="card-text text-center pt-4">Working to protect and restore rivers and their
@@ -219,7 +219,7 @@
                 </section>
                 <section class="col mb-4">
                     <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                        <div class="flip-inner card border-primary h-100">
+                        <div class="flip-inner card  h-100">
                             <div class="flip-front card-body">
                                 <h5 class="card-title text-center pt-2">Marine Conservation Society</h5>
                                 <p class="card-text pt-4 text-center">Protecting marine life and advocating for cleaner
@@ -237,7 +237,7 @@
                 </section>
                 <section class="col mb-4">
                     <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                        <div class="flip-inner card border-primary h-100">
+                        <div class="flip-inner card h-100">
                             <div class="flip-front card-body">
                                 <h5 class="card-title text-center pt-2">Sewage Campaign Network</h5>
                                 <p class="card-text text-center pt-4">Advocating for better sewage treatment and river
@@ -351,17 +351,21 @@
 
     <!-- Contact Section -->
     <section id="contact" class="text-center pb-5 d-flex align-items-center" aria-label="contact">
-        <div class="container text-center py-3 mb-auto">
+        <div class="container text-center py-3 mb-auto col-12 col-md-4 col-lg-4">
             <h3 class=>~ Contact ~</h3>
-            <form>
+            <form id="contact-form" novalidate>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Name" />
+                    <input type="text" class="form-control" id="contact-name" placeholder="Name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
                 </div>
                 <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Email" />
+                    <input type="email" class="form-control" id="contact-email" placeholder="Email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                    <textarea class="form-control" id="contact-message" rows="5" placeholder="Message"
+                        required></textarea>
+                    <div class="invalid-feedback">Please enter your message.</div>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
