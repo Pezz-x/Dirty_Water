@@ -25,11 +25,11 @@ async function initMap() {
             if (!isNaN(lat) && !isNaN(lng)) {
                 let color;
                 if (status === -1) {
-                    color = "#8F8F94"; 
+                    color = "#8F8F94";
                 } else if (status === 0) {
                     color = `#00FF60`;
                 } else if (status === 1) {
-                    color = "#EA0C00"; 
+                    color = "#EA0C00";
                 } else {
                     color = "#000000";
                 }
@@ -42,8 +42,8 @@ async function initMap() {
                         path: google.maps.SymbolPath.CIRCLE,
                         scale: 8,
                         fillColor: color,
-                        fillOpacity: .8,
-                        strokeWeight: .1,
+                        fillOpacity: 0.8,
+                        strokeWeight: 0.1,
                         strokeColor: "black",
                     },
                 });
@@ -57,11 +57,11 @@ async function initMap() {
                             path: google.maps.SymbolPath.CIRCLE,
                             scale: 8,
                             fillColor: color,
-                            fillOpacity: .2,
+                            fillOpacity: 0.2,
                             strokeWeight: 0,
                             strokeColor: "black",
                         },
-                    })
+                    });
                     let growing = true;
                     let scale = 8;
                     setInterval(() => {
@@ -76,7 +76,7 @@ async function initMap() {
                             path: google.maps.SymbolPath.CIRCLE,
                             scale: scale,
                             fillColor: color,
-                            fillOpacity: .2,
+                            fillOpacity: 0.2,
                             strokeWeight: 0,
                             strokeColor: "black",
                         });
@@ -95,24 +95,34 @@ async function initMap() {
                             date.getDate()
                         )}/${pad(date.getMonth() + 1)}/${date.getFullYear()}`;
                     }
+                    /* convert current status of pumps from type int to string */
+                    function currentStatus(status) {
+                        status = parseInt(status);
+                        if (status === -1) return "Offline";
+                        if (status === 0) return "Pump Off";
+                        if (status === 1) return "Pump On";
+                        return "Unknown";
+                    }
 
                     infoWindow.setContent(`
-                    <div class="custom-infowindow">
-                        <b>Status -1= offline 0= not pumping 1=pumping :</b> ${
-                            attrs.status
-                        }<br>
-                        <b>Latest Release Started:</b> ${formatUTC(
-                            attrs.latestEventStart
-                        )}<br>
-                        <b>Latest Release Stopped:</b> ${formatUTC(
-                            attrs.latestEventEnd
-                        )}<br>
-                        <b>Receiving Water Course:</b> ${
-                            attrs.receivingWaterCourse
-                        }<br>
-                        <b>Last Updated:</b> ${formatUTC(attrs.lastUpdated)}<br>
-                    </div>
-                    `);
+                            <div class="custom-infowindow">
+                                <b>Status:</b> ${currentStatus(
+                                    attrs.status
+                                )}<br>
+                                <b>Latest Release Started:</b> ${formatUTC(
+                                    attrs.latestEventStart
+                                )}<br>
+                                <b>Latest Release Stopped:</b> ${formatUTC(
+                                    attrs.latestEventEnd
+                                )}<br>
+                                <b>Receiving Water Course:</b> ${
+                                    attrs.receivingWaterCourse
+                                }<br>
+                                <b>Last Updated:</b> ${formatUTC(
+                                    attrs.lastUpdated
+                                )}<br>
+                            </div>
+                        `);
                     infoWindow.open(map, marker);
                 });
             }
@@ -121,7 +131,6 @@ async function initMap() {
         console.error("Error fetching ArcGIS data:", error);
     }
 }
-
 // Remove the duplicate initPopUp function and the <script> tag from here.
 // The Google Maps API script should only use the callback parameter to call initMap.
 
@@ -132,7 +141,6 @@ async function initMap() {
 const nextTide = document.getElementById("next-tide");
 const tideAfterNext = document.getElementById("tide-after-next");
 const tideStatus = document.getElementById("tide-status");
-
 
 // Utility: Get current ISO date string like '2025-06-18'
 function getTodayDate() {
