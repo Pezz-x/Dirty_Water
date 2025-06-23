@@ -1,5 +1,3 @@
-var key = config.KEY;
-
 async function initMap() {
     // Centre on Cornwall
     const cornwallCenter = { lat: 50.4108, lng: -5.081 };
