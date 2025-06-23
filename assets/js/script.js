@@ -95,24 +95,38 @@ async function initMap() {
                             date.getDate()
                         )}/${pad(date.getMonth() + 1)}/${date.getFullYear()}`;
                     }
+                    /* convert current status of pumps from type int to string */
+                    function currentStatus(attrs) {
+                        let status;
+
+                        if (status === -1) {
+                            return "Offline";
+                        } else if (status === 0) {
+                            return "Pump Off";
+                        } else if (status === 1) {
+                            return "Pump On";
+                        } else {
+                            return "Unknown";
+                        }
+                    }
 
                     infoWindow.setContent(`
-                    <div class="custom-infowindow">
-                        <b>Status -1= offline 0= not pumping 1=pumping :</b> ${
-                            attrs.status
-                        }<br>
-                        <b>Latest Release Started:</b> ${formatUTC(
-                            attrs.latestEventStart
-                        )}<br>
-                        <b>Latest Release Stopped:</b> ${formatUTC(
-                            attrs.latestEventEnd
-                        )}<br>
-                        <b>Receiving Water Course:</b> ${
-                            attrs.receivingWaterCourse
-                        }<br>
-                        <b>Last Updated:</b> ${formatUTC(attrs.lastUpdated)}<br>
-                    </div>
-                    `);
+                        <div class="custom-infowindow">
+                            <b>Status:</b> ${currentStatus(status)}<br>
+                            <b>Latest Release Started:</b> ${formatUTC(
+                                attrs.latestEventStart
+                            )}<br>
+                            <b>Latest Release Stopped:</b> ${formatUTC(
+                                attrs.latestEventEnd
+                            )}<br>
+                            <b>Receiving Water Course:</b> ${
+                                attrs.receivingWaterCourse
+                            }<br>
+                            <b>Last Updated:</b> ${formatUTC(
+                                attrs.lastUpdated
+                            )}<br>
+                        </div>
+                        `);
                     infoWindow.open(map, marker);
                 });
             }
@@ -121,7 +135,6 @@ async function initMap() {
         console.error("Error fetching ArcGIS data:", error);
     }
 }
-
 // Remove the duplicate initPopUp function and the <script> tag from here.
 // The Google Maps API script should only use the callback parameter to call initMap.
 
