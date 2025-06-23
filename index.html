@@ -44,7 +44,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="text-center py-5 d-flex flex-column align-items-center justify-content-center">
+    <section id="hero" class="text-center pb-5 d-flex flex-column align-items-center justify-content-center">
         <div class="container bg-transparent">
             <h1 class="display-1">Dirty Water</h1>
             <p class="lead pt-2 bg-transparent"></p>
@@ -109,298 +109,298 @@
         </div>
     </section>
 
-        <!-- About Section -->
-        <section id="about" class="text-center py-5 container" aria-label="Why Water Quality Matters">
-            <div class="text-center py-3 row d-flex justify-content-center">
-                <div class="col-md-8 col-lg-9 p-4">
-                    <h2>Why keep an eye on the water?</h2>
-                    <p>
-                        Rivers and seas should be playgrounds, not health gambles. But companies are releasing untreated
-                        waste straight into waterways at an unprecedented rate. Combined with
-                        agricultural runoff and micro-plastics, it is harming wildlife and human health alike.
-                        <strong>Dirty Water</strong> is here to help you navigate these waters safely.
-                    </p>
-                    <p>
-                        Our map layers live discharge alerts so you can decide whether today is a splash-about day or a
-                        stay-on-shore day.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Warning Section -->
-        <section id="info" class=" container pt-5 d-flex align-items-center" aria-label="Important map disclaimer">
-            <div class="col-lg-11 py-3 mx-auto">
-                <h3>Important:</h3>
+    <!-- About Section -->
+    <section id="about" class="text-center pb-5 container" aria-label="Why Water Quality Matters">
+        <div class="text-center py-3 row d-flex justify-content-center">
+            <div class="col-md-8 col-lg-9 p-4">
+                <h2>Why keep an eye on the water?</h2>
                 <p>
-                    This map displays shows the status of sewage overflows across Cornwall. It does not indicate water-safety. To be used for educational purposes only.
+                    Rivers and seas should be playgrounds, not health gambles. But companies are releasing untreated
+                    waste straight into waterways at an unprecedented rate. Combined with
+                    agricultural runoff and micro-plastics, it is harming wildlife and human health alike.
+                    <strong>Dirty Water</strong> is here to help you navigate these waters safely.
+                </p>
+                <p>
+                    Our map layers live discharge alerts so you can decide whether today is a splash-about day or a
+                    stay-on-shore day.
                 </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Google Map Section -->
-        <section id="mapContainer" class="container d-flex align-items-center"
-            aria-label="Map showing sewage overflow locations">
-            <div id="map"></div>
+    <!-- Warning Section -->
+    <section id="info" class=" container pb-3 d-flex align-items-center" aria-label="Important map disclaimer">
+        <div class="col-lg-11 py-3 mx-auto">
+            <h3>Important:</h3>
+            <p>
+                This map displays shows the status of sewage overflows across Cornwall. It does not indicate
+                water-safety. To be used for educational purposes only.
+            </p>
+        </div>
+    </section>
 
-            <!-- Load Google Maps API -->
-            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
-            <!-- Replace YOUR_API_KEY with your actual Google Maps API key. -->
-            <script
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn_zFu8ZkbfPgSIjZfFsnC2tjJKTibZ2I&callback=initMap"
-                async defer></script>
-        </section>
+    <!-- Google Map Section -->
+    <section id="mapContainer" class="container d-flex align-items-center"
+        aria-label="Map showing sewage overflow locations">
+        <div id="map"></div>
 
-        <!-- Tide Section -->
-        <section id="tide-times" class="text-center pb-5 d-flex align-items-center" aria-label="tide times">
-            <div class="container d-flex justify-content-center">
-                <div class="table-container col-8">
-                    <div id="tide-table" class="row text-center py-2">
-                        <div class="col-12 fw-bold py-2 remove-mb">Cornwall Tide Times:</div>
-                        <div id="next-tide" class="col-6 py-2"></div>
-                        <div id="tide-after-next" class="col-6 py-2"></div>
-                        <div id="tide-status" class="col-12 py-2"></div>
-                    </div>
+        <!-- Load Google Maps API -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+        <!-- Replace YOUR_API_KEY with your actual Google Maps API key. -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn_zFu8ZkbfPgSIjZfFsnC2tjJKTibZ2I&callback=initMap"
+            async defer></script>
+    </section>
+
+    <!-- Tide Section -->
+    <section id="tide-times" class="text-center pb-5 d-flex align-items-center" aria-label="tide times">
+        <div class="container d-flex justify-content-center">
+            <div class="table-container col-8">
+                <div id="tide-table" class="row text-center py-2">
+                    <div class="col-12 fw-bold py-2 remove-mb">Cornwall Tide Times:</div>
+                    <div id="next-tide" class="col-6 py-2"></div>
+                    <div id="tide-after-next" class="col-6 py-2"></div>
+                    <div id="tide-status" class="col-12 py-2"></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!--NB SHOULD THIS NOT BE A BUTTON OR MODAL?! Take Action Section -->
-        <!--
+    <!--NB SHOULD THIS NOT BE A BUTTON OR MODAL?! Take Action Section -->
+    <!--
       The "Take Action" section intentionally uses flip cards to draw attention and encourage user interaction with action items.
       This distinct interaction pattern is used to highlight important resources and is consistent with the site's goal of promoting engagement.
     -->
-        <section id="take-action" aria-label="take action" class="py-5">
-            <div class="container">
-                <h3 class="text-center">~ Take Action ~</h3>
-                <p class="text-center mb-4">
-                    Get involved with organizations and campaigns working to improve water quality and protect our
-                    rivers
-                    and seas. Explore the options below to learn how you can make a difference.
-                </p>
-                <!-- Bootstrap grid: 1 column on xs, 2 on sm, 4 on lg -->
-                <div class="row fill mb-2 row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                    <section class="col mb-4">
-                        <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                            <div class="flip-inner card border-primary h-100">
-                                <div class="flip-front card-body">
-                                    <h5 class="card-title">Surfers Against Sewage</h5>
-                                    <p class="card-text">Campaigning to end sewage discharge and protect coastlines.</p>
-                                </div>
-                                <div class="flip-back card-body text-center">
-                                    <p class="card-text">Real-time alerts, plastic reduction, and wild ocean activism.
-                                    </p>
-                                    <a href="https://www.sas.org.uk/" target="_blank" class="btn btn-primary" rel="noopener">Visit
-                                        Site</a>
-                                </div>
+    <section id="take-action" aria-label="take action" class="pb-5">
+        <div class="container">
+            <h3 class="text-center">~ Take Action ~</h3>
+            <p class="text-center mb-4">
+                Get involved with organizations and campaigns working to improve water quality and protect our
+                rivers
+                and seas. Explore the options below to learn how you can make a difference.
+            </p>
+            <!-- Bootstrap grid: 1 column on xs, 2 on sm, 4 on lg -->
+            <div class="row fill mb-2 row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                <section class="col mb-4">
+                    <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-inner card border-primary h-100">
+                            <div class="flip-front card-body">
+                                <h5 class="card-title">Surfers Against Sewage</h5>
+                                <p class="card-text">Campaigning to end sewage discharge and protect coastlines.</p>
+                            </div>
+                            <div class="flip-back card-body text-center">
+                                <p class="card-text">Real-time alerts, plastic reduction, and wild ocean activism.
+                                </p>
+                                <a href="https://www.sas.org.uk/" target="_blank" class="btn btn-primary"
+                                    rel="noopener">Visit
+                                    Site</a>
                             </div>
                         </div>
-                    </section>
-                    <section class="col mb-4">
-                        <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                            <div class="flip-inner card border-primary h-100">
-                                <div class="flip-front card-body">
-                                    <h5 class="card-title">The Rivers Trust</h5>
-                                    <p class="card-text">Working to protect and restore rivers and their ecosystems.</p>
-                                </div>
-                                <div class="flip-back card-body text-center">
-                                    <p class="card-text">A network of river trusts across the UK.</p>
-                                    <a href="https://www.theriverstrust.org/" target="_blank"
-                                        class="btn btn-primary" rel="noopener">Visit
-                                        Site</a>
-                                </div>
+                    </div>
+                </section>
+                <section class="col mb-4">
+                    <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-inner card border-primary h-100">
+                            <div class="flip-front card-body">
+                                <h5 class="card-title">The Rivers Trust</h5>
+                                <p class="card-text">Working to protect and restore rivers and their ecosystems.</p>
+                            </div>
+                            <div class="flip-back card-body text-center">
+                                <p class="card-text">A network of river trusts across the UK.</p>
+                                <a href="https://www.theriverstrust.org/" target="_blank" class="btn btn-primary"
+                                    rel="noopener">Visit
+                                    Site</a>
                             </div>
                         </div>
-                    </section>
-                    <section class="col mb-4">
-                        <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
-                            <div class="flip-inner card border-primary h-100">
-                                <div class="flip-front card-body">
-                                    <h5 class="card-title">Marine Conservation Society</h5>
-                                    <p class="card-text">Protecting marine life and advocating for cleaner seas.</p>
-                                </div>
-                                <div class="flip-back card-body text-center">
-                                    <p class="card-text">Join the fight for healthier oceans and coastlines.</p>
-                                    <a href="https://www.mcsuk.org/" target="_blank" class="btn btn-primary" rel="noopener">Visit
-                                        Site</a>
-                                </div>
+                    </div>
+                </section>
+                <section class="col mb-4">
+                    <div class="flip-card h-100" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-inner card border-primary h-100">
+                            <div class="flip-front card-body">
+                                <h5 class="card-title">Marine Conservation Society</h5>
+                                <p class="card-text">Protecting marine life and advocating for cleaner seas.</p>
+                            </div>
+                            <div class="flip-back card-body text-center">
+                                <p class="card-text">Join the fight for healthier oceans and coastlines.</p>
+                                <a href="https://www.mcsuk.org/" target="_blank" class="btn btn-primary"
+                                    rel="noopener">Visit
+                                    Site</a>
                             </div>
                         </div>
-                    </section>
-                    <section class="col mb-4">
-                        <div class="card flip-card h-100" onclick="this.classList.toggle('flipped')">
-                            <div class="flip-inner card border-primary h-100">
-                                <div class="flip-front card-body">
-                                    <h5 class="card-title">Sewage Campaign Network</h5>
-                                    <p class="card-text">Advocating for better sewage treatment and river protection.
-                                    </p>
-                                </div>
-                                <div class="flip-back card-body text-center">
-                                    <p class="card-text">
-                                        Grassroots coalitions fighting water pollution through activism and citizen
-                                        science.
-                                    </p>
-                                    <a href="https://www.sewagecampaign.org/" target="_blank"
-                                        class="btn btn-primary" rel="noopener">Visit
-                                        Site</a>
-                                </div>
+                    </div>
+                </section>
+                <section class="col mb-4">
+                    <div class="card flip-card h-100" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-inner card border-primary h-100">
+                            <div class="flip-front card-body">
+                                <h5 class="card-title">Sewage Campaign Network</h5>
+                                <p class="card-text">Advocating for better sewage treatment and river protection.
+                                </p>
+                            </div>
+                            <div class="flip-back card-body text-center">
+                                <p class="card-text">
+                                    Grassroots coalitions fighting water pollution through activism and citizen
+                                    science.
+                                </p>
+                                <a href="https://www.sewagecampaign.org/" target="_blank" class="btn btn-primary"
+                                    rel="noopener">Visit
+                                    Site</a>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="text-center pb-5 d-flex align-items-center" aria-label="faqs">
+        <div class="container text-center py-3 mb-auto">
+            <h3>~ FAQs ~</h3>
+            <div class="accordion accordion-flush text-start" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            1. Can I still swim or surf after a sewage discharge?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">It’s not recommended. Bacteria levels can be dangerously high
+                            for up
+                            to 48–72 hours after a discharge. You risk exposure to pathogens
+                            that can cause ear infections, stomach upsets, and more serious illnesses.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            2. Is it legal for South West Water to dump sewage into the sea?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Yes, — sadly under current UK law, water companies are permitted
+                            to
+                            discharge untreated wastewater during heavy rainfall events.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            3. How often does South West Water release sewage?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">South West Water report thousands of storm overflow events.
+                            While
+                            there is ongoing work to reduce them,
+                            many locations still see hundreds of discharges each year.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            4. What are the impacts of sewage pollution?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Sewage-contaminated waters contain millions of
+                            pathogens per cubic metre, causing illnesses like gastroenteritis and skin infections.</div>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                            5. How long do sewage alerts stay active after a discharge?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Alerts on the Safer Seas & Rivers Service (SSRS)
+                            remain live for 48 hours after a discharge.</div>
+                    </div>
+
                 </div>
             </div>
-        </section>
+    </section>
 
-
-
-        <!-- FAQ Section -->
-        <section id="faq" class="text-center py-5 d-flex align-items-center" aria-label="faqs">
-            <div class="container text-center py-3 mb-auto">
-                <h3>~ FAQs ~</h3>
-                <div class="accordion accordion-flush text-start" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                                1. Can I still swim or surf after a sewage discharge?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">It’s not recommended. Bacteria levels can be dangerously high
-                                for up
-                                to 48–72 hours after a discharge. You risk exposure to pathogens
-                                that can cause ear infections, stomach upsets, and more serious illnesses.</div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                aria-controls="flush-collapseTwo">
-                                2. Is it legal for South West Water to dump sewage into the sea?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Yes, — sadly under current UK law, water companies are permitted
-                                to
-                                discharge untreated wastewater during heavy rainfall events.</div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                                3. How often does South West Water release sewage?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">South West Water report thousands of storm overflow events.
-                                While
-                                there is ongoing work to reduce them,
-                                many locations still see hundreds of discharges each year.</div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseFour" aria-expanded="false"
-                                aria-controls="flush-collapseFour">
-                                4. What are the impacts of sewage pollution?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Sewage-contaminated waters contain millions of
-                                pathogens per cubic metre, causing illnesses like gastroenteritis and skin infections.</div>
-                        </div>
-                    </div>
-
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseFive" aria-expanded="false"
-                                aria-controls="flush-collapseFive">
-                                5. How long do sewage alerts stay active after a discharge?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseFive" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Alerts on the Safer Seas & Rivers Service (SSRS)
-                                remain live for 48 hours after a discharge.</div>
-                    </div>
-
+    <!-- Contact Section -->
+    <section id="contact" class="text-center pb-5 d-flex align-items-center" aria-label="contact">
+        <div class="container text-center py-3 mb-auto">
+            <h3 class=>~ Contact ~</h3>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Name" />
                 </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="text-center py-5 d-flex align-items-center" aria-label="contact">
-            <div class="container text-center py-3 mb-auto">
-                <h3 class=>~ Contact ~</h3>
-                <form>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Name" />
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Email" />
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" rows="3" placeholder="Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- Footer Section -->
-        <footer id="footer" class="text-center py-5 d-flex align-items-center mt-auto"
-            aria-label="Footer with social links and copyright">
-            <div class="container text-center py-3 mb-auto">
-                <div class="row d-flex flex-column flex-md-row justify-content-between align-items-center">
-                    <div class="footer text-center footer-text mb-auto">
-                        <p class="header">Dirty Water</p>
-                        <p class="copyright"><em>© Dirty Water</em></p>
-                    </div>
-                    <div class="footer row d-flex flex-column flex-md-row justify-content-between align-items-center">
-                    </div>
-                    <!-- Social Links -->
-                    <ul class="footer column-gap-2 my-2">
-                        <li>
-                            <a href="https://www.facebook.com" aria-label="Visit our Facebook page (opens in a new tab)"
-                                target="blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com"
-                                aria-label="Visit our Instagram page (opens in a new tab)" target="blank"
-                                rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://x.com" aria-label="Visit our X / Twitter page (opens in a new tab)"
-                                target="blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
-                        </li>
-                    </ul>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email" />
                 </div>
-            </div>
-            </div>
-        </footer>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
 
-        <!-- Bootstrap Link -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-            crossorigin="anonymous"></script>
-        <!-- Font Awesome Link -->
-        <script src="https://kit.fontawesome.com/9199489a36.js" crossorigin="anonymous"></script>
-        <!-- GOOGLE MAP Script-->
-        <script src="./assets/js/script.js"></script>
+    <!-- Footer Section -->
+    <footer id="footer" class="text-center pb-5 d-flex align-items-center mt-auto"
+        aria-label="Footer with social links and copyright">
+        <div class="container text-center py-3 mb-auto">
+            <div class="row d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="footer text-center footer-text mb-auto">
+                    <p class="header">Dirty Water</p>
+                    <p class="copyright"><em>© Dirty Water</em></p>
+                </div>
+                <div class="footer row d-flex flex-column flex-md-row justify-content-between align-items-center">
+                </div>
+                <!-- Social Links -->
+                <ul class="footer column-gap-2 my-2">
+                    <li>
+                        <a href="https://www.facebook.com" aria-label="Visit our Facebook page (opens in a new tab)"
+                            target="blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" aria-label="Visit our Instagram page (opens in a new tab)"
+                            target="blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://x.com" aria-label="Visit our X / Twitter page (opens in a new tab)"
+                            target="blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/9199489a36.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE MAP Script-->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
