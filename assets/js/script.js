@@ -1,5 +1,3 @@
-var key = config.KEY;
-
 async function initMap() {
     // Centre on Cornwall
     const cornwallCenter = { lat: 50.4108, lng: -5.081 };
@@ -27,13 +25,13 @@ async function initMap() {
             if (!isNaN(lat) && !isNaN(lng)) {
                 let color;
                 if (status === -1) {
-                    color = "grey";
+                    color = "#8F8F94"; 
                 } else if (status === 0) {
-                    color = "green";
+                    color = `#00FF60`;
                 } else if (status === 1) {
-                    color = "red";
+                    color = "#EA0C00"; 
                 } else {
-                    color = "black";
+                    color = "#000000";
                 }
 
                 const marker = new google.maps.Marker({
@@ -42,13 +40,48 @@ async function initMap() {
                     title: `ID: ${attrs.ID}\nStatus: ${attrs.status}`,
                     icon: {
                         path: google.maps.SymbolPath.CIRCLE,
-                        scale: 10,
+                        scale: 8,
                         fillColor: color,
-                        fillOpacity: 1,
-                        strokeWeight: 1,
+                        fillOpacity: .8,
+                        strokeWeight: .1,
                         strokeColor: "black",
                     },
                 });
+
+                if (status === 1) {
+                    const marker = new google.maps.Marker({
+                        position: { lat: lat, lng: lng },
+                        map: map,
+                        title: `ID: ${attrs.ID}\nStatus: ${attrs.status}`,
+                        icon: {
+                            path: google.maps.SymbolPath.CIRCLE,
+                            scale: 8,
+                            fillColor: color,
+                            fillOpacity: .2,
+                            strokeWeight: 0,
+                            strokeColor: "black",
+                        },
+                    })
+                    let growing = true;
+                    let scale = 8;
+                    setInterval(() => {
+                        if (growing) {
+                            scale += 0.5;
+                            if (scale >= 15) growing = false;
+                        } else {
+                            scale -= 0.5;
+                            if (scale <= 8) growing = true;
+                        }
+                        marker.setIcon({
+                            path: google.maps.SymbolPath.CIRCLE,
+                            scale: scale,
+                            fillColor: color,
+                            fillOpacity: .2,
+                            strokeWeight: 0,
+                            strokeColor: "black",
+                        });
+                    }, 50);
+                }
 
                 marker.addListener("click", () => {
                     function formatUTC(utcString) {
