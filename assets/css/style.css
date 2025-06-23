@@ -5,8 +5,10 @@
 :root {
     --primary-color: #347881;
     --secondary-color: #013948;
-    --light-font-color: #fafafa;
+    --light-font-color: wheat;
+    --secondary-light-font-color: #fafafa;
     --dark-font-color: #333;
+    --secondary-dark-font-color: wheat;
     --light-blue-color: #61979e;
     --primary-font: "Montserrat", sans-serif;
     --secondary-font: "Lexend", sans-serif;
@@ -17,6 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--secondary-color);
 }
 
 .display-4 {
@@ -25,8 +28,12 @@
 }
 body {
     background-color: var(--primary-color);
-    color: var(--dark-font-color);
+    color: var(--light-font-color);
     font-family: var(--primary-font);
+}
+
+p {
+    color: var(--light-font-color);
 }
 
 /* Navbar Styling */
@@ -36,7 +43,7 @@ body {
     color: var(--light-font-color);
 }
 #navbar * {
-    color: var(--light-blue-color);
+    color: var(--light-font-color);
 }
 
 /* Hero Section */
@@ -50,6 +57,8 @@ body {
 #hero h1 {
     font-family: var(--secondary-font);
     font-weight: bold;
+    color: var(--light-font-color);
+    background-color: transparent;
 }
 /* Modal Styling */
 .modal-header {
@@ -155,12 +164,62 @@ body {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: grey;
+    background-color: var(--secondary-color);
+    color: var(--secondary-dark-font-color);
     border: 2px solid white;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
 /*#############################################################*/
+/* Flip Card Styles */
+
+.flip-card {
+    perspective: 1000px;
+    height: 100%;
+    position: relative;
+}
+
+.flip-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.flip-front {
+    background-color: #fff;
+    z-index: 2;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card:hover {
+    cursor: pointer;
+}
 
 .copyright {
     font-size: small;
@@ -182,3 +241,5 @@ body {
     color: wheat;
     font-size: 2rem;
 }
+
+/*test style*/
