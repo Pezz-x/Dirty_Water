@@ -87,6 +87,10 @@ p {
 }
 
 /* Tide Times */
+.remove-mb {
+    margin-bottom: 0;
+    color: var(--secondary-color);
+}
 .table-container {
     max-width: 100%;
     margin: 0 auto;
