@@ -44,16 +44,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="text-center py-5 d-flex align-items-center">
+    <section id="hero" class="text-center py-5 d-flex flex-column align-items-center justify-content-center">
         <div class="container bg-transparent">
             <h1 class="display-1">Dirty Water</h1>
             <p class="lead pt-2 bg-transparent"></p>
         </div>
-    </section>
-
-    <!-- Registration Modal -->
-    <section id="registration" class="pt-5 container d-flex justify-content-center">
-        <!-- Button trigger modal -->
+        <!-- Registration Modal -->
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Register for updates
         </button>
@@ -113,27 +109,27 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="pt-5">
         <!-- About Section -->
-        <section id="intro" class="text-center py-5 d-flex align-items-center" aria-label="Why Water Quality Matters">
-            <div class="container text-center py-3">
-                <h2>Why keep an eye on the water?</h2>
-                <p>
-                    Rivers and seas should be playgrounds, not health gambles. But companies are releasing untreated
-                    waste straight into waterways at an unprecedented rate. Combined with
-                    agricultural runoff and micro-plastics, it is harming wildlife and human health alike.
-                    <strong>Dirty Water</strong> is here to help you navigate these waters safely.
-                </p>
-                <p>
-                    Our map layers live discharge alerts so you can decide whether today is a splash-about day or a
-                    stay-on-shore day.
-                </p>
-
+        <section id="about" class="text-center py-5 container" aria-label="Why Water Quality Matters">
+            <div class="text-center py-3 row d-flex justify-content-center">
+                <div class="col-md-8 col-lg-9 p-4">
+                    <h2>Why keep an eye on the water?</h2>
+                    <p>
+                        Rivers and seas should be playgrounds, not health gambles. But companies are releasing untreated
+                        waste straight into waterways at an unprecedented rate. Combined with
+                        agricultural runoff and micro-plastics, it is harming wildlife and human health alike.
+                        <strong>Dirty Water</strong> is here to help you navigate these waters safely.
+                    </p>
+                    <p>
+                        Our map layers live discharge alerts so you can decide whether today is a splash-about day or a
+                        stay-on-shore day.
+                    </p>
+                </div>
             </div>
         </section>
+
         <!-- Google Map Section -->
-        <section id="mapContainer" class="container py-5 d-flex align-items-center"
+        <section id="mapContainer" class="container d-flex align-items-center"
             aria-label="Map showing sewage overflow locations">
             <div id="map"></div>
 
@@ -146,22 +142,21 @@
         </section>
 
         <!-- Tide Section -->
-        <section id="tide-times" class="text-center py-5 d-flex align-items-center" aria-label="tide times">
-            <div class="container text-center py-3 mb-auto">
-                <div class="container d-flex justify-content-center">
-                    <div class="table-container col-8">
-                        <div id="tide-table" class="row text-center py-2">
-                            <div class="col-12 fw-bold py-2 remove-mb">Cornwall Tide Times:</div>
-                            <div id="next-tide" class="col-6 py-2"></div>
-                            <div id="tide-after-next" class="col-6 py-2"></div>
-                            <div id="tide-status" class="col-12 py-2"></div>
-                        </div>
+        <section id="tide-times" class="text-center pb-5 d-flex align-items-center" aria-label="tide times">
+            <div class="container d-flex justify-content-center">
+                <div class="table-container col-8">
+                    <div id="tide-table" class="row text-center py-2">
+                        <div class="col-12 fw-bold py-2 remove-mb">Cornwall Tide Times:</div>
+                        <div id="next-tide" class="col-6 py-2"></div>
+                        <div id="tide-after-next" class="col-6 py-2"></div>
+                        <div id="tide-status" class="col-12 py-2"></div>
                     </div>
                 </div>
-
+            </div>
+        </section>
 
         <!-- Warning Section -->
-        <section id="about" class="text-center py-5 d-flex align-items-center" aria-label="Important map disclaimer">
+        <section id="info" class="text-center py-5 d-flex align-items-center" aria-label="Important map disclaimer">
             <div class="container text-center py-3 mb-auto">
                 <h3>Important: This Map Won’t Warn You About Water Safety Risks</h3>
                 <p>
@@ -170,10 +165,6 @@
                     It shows the operational status of sewage overflows across the county, but alone provides
                     insufficient context to accurately assess water health.
                     For educational purposes only.
-                </p>
-            </div>
-        </section>
-
                 </p>
             </div>
         </section>
