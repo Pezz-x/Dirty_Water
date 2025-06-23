@@ -221,7 +221,7 @@ p {
 }
 
 .flip-card:hover {
-    cursor: pointer;
+    cursor: crosshair;
 }
 
 /*footer style*/
