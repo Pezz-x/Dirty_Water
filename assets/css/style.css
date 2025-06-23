@@ -91,8 +91,10 @@ p {
     /* border: 2px solid black; */
     /* Light background for table */
 }
+
 .remove-mb {
     margin-bottom: 0;
+    color: var(--secondary-color);
 }
 /* Toggle tidal direction color */
 /* .tide-going-out {
