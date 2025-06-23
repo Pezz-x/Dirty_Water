@@ -231,6 +231,8 @@ const tideData = [
         Filtered: false,
         Date: "2025-06-23T00:00:00",
     },
+
+    
     {
         EventType: "HighWater",
         DateTime: "2025-06-24T03:46:00",
@@ -359,17 +361,10 @@ function loadTideData() {
     // Get current time
     const now = new Date();
 
-    // Filter events that are still upcoming today
-    const upcoming = todayEvents.filter(
+    // Filter events that are still upcoming
+    const upcoming = tideData.filter(
         (event) => new Date(event.DateTime) > now
     );
-
-    if (upcoming.length === 0) {
-        nextTide.textContent = "No upcoming tide events for today.";
-        tideAfterNext.textContent = "No upcoming tide events for today.";
-        tideStatus.textContent = "No upcoming tide events for today.";
-        return;
-    }
 
     // Get the next 2 tide events
     const nextTwo = upcoming.slice(0, 2);
