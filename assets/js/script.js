@@ -62,20 +62,22 @@ async function initMap() {
                     }
 
                     infoWindow.setContent(`
-            <div>
-              <b>Status -1= offline 0= not pumping 1=pumping :</b> ${
-                  attrs.status
-              }<br>
-              <b>Latest Release Started:</b> ${formatUTC(
-                  attrs.latestEventStart
-              )}<br>
-              <b>Latest Release Stopped:</b> ${formatUTC(
-                  attrs.latestEventEnd
-              )}<br>
-              <b>Receiving Water Course:</b> ${attrs.receivingWaterCourse}<br>
-              <b>Last Updated:</b> ${formatUTC(attrs.lastUpdated)}<br>
-            </div>
-          `);
+                    <div class="custom-infowindow">
+                        <b>Status -1= offline 0= not pumping 1=pumping :</b> ${
+                            attrs.status
+                        }<br>
+                        <b>Latest Release Started:</b> ${formatUTC(
+                            attrs.latestEventStart
+                        )}<br>
+                        <b>Latest Release Stopped:</b> ${formatUTC(
+                            attrs.latestEventEnd
+                        )}<br>
+                        <b>Receiving Water Course:</b> ${
+                            attrs.receivingWaterCourse
+                        }<br>
+                        <b>Last Updated:</b> ${formatUTC(attrs.lastUpdated)}<br>
+                    </div>
+                    `);
                     infoWindow.open(map, marker);
                 });
             }
@@ -95,8 +97,6 @@ async function initMap() {
 const nextTide = document.getElementById("next-tide");
 const tideAfterNext = document.getElementById("tide-after-next");
 const tideStatus = document.getElementById("tide-status");
-
-
 
 // const tideData = [
 //     {
@@ -235,7 +235,6 @@ const tideStatus = document.getElementById("tide-status");
 //         Date: "2025-06-23T00:00:00",
 //     },
 
-
 //     {
 //         EventType: "HighWater",
 //         DateTime: "2025-06-24T03:46:00",
@@ -355,52 +354,52 @@ function getTideDirection(nextTideType) {
 }
 
 async function loadTideData() {
-  // Fetching JSON.
+    // Fetching JSON.
     try {
-      const response = await fetch('assets/js/water_level_data.json');
+        const response = await fetch("assets/js/water_level_data.json");
 
-      if (!response.ok)
-        throw new Error(`Failed to fetch tide data: ${response.status}`);
+        if (!response.ok)
+            throw new Error(`Failed to fetch tide data: ${response.status}`);
 
-      const data = await response.json();
+        const data = await response.json();
 
-      // Get only events for today
-    const today = getTodayDate();
-    const todayEvents = data.filter((event) =>
-        event.DateTime.startsWith(today)
-    );
+        // Get only events for today
+        const today = getTodayDate();
+        const todayEvents = data.filter((event) =>
+            event.DateTime.startsWith(today)
+        );
 
-    // Get current time
-    const now = new Date();
+        // Get current time
+        const now = new Date();
 
-    // Filter events that are still upcoming
-    const upcoming = data.filter(
-        (event) => new Date(event.DateTime) > now
-    );
+        // Filter events that are still upcoming
+        const upcoming = data.filter((event) => new Date(event.DateTime) > now);
 
-    // Get the next 2 tide events
-    const nextTwo = upcoming.slice(0, 2);
+        // Get the next 2 tide events
+        const nextTwo = upcoming.slice(0, 2);
 
-    // Determine if tide is coming in or out
-    const direction = getTideDirection(nextTwo[0].EventType);
+        // Determine if tide is coming in or out
+        const direction = getTideDirection(nextTwo[0].EventType);
 
-    // Display them
-      tideStatus.innerHTML = `<p class="remove-mb"><strong>${direction}</strong></p>`
-      nextTide.innerHTML = `<p class="remove-mb"><strong>${nextTwo[0].EventType === "HighWater" ? "High Tide" : "Low Tide"}</strong> at ${formatTime(nextTwo[0].DateTime)} (${nextTwo[0].Height.toFixed(2)}m)</p>`
-      tideAfterNext.innerHTML = `<p class="remove-mb"><strong>${nextTwo[1].EventType === "HighWater" ? "High Tide" : "Low Tide"}</strong> at ${formatTime(nextTwo[1].DateTime)} (${nextTwo[1].Height.toFixed(2)}m)</p>`
-
-
+        // Display them
+        tideStatus.innerHTML = `<p class="remove-mb"><strong>${direction}</strong></p>`;
+        nextTide.innerHTML = `<p class="remove-mb"><strong>${
+            nextTwo[0].EventType === "HighWater" ? "High Tide" : "Low Tide"
+        }</strong> at ${formatTime(
+            nextTwo[0].DateTime
+        )} (${nextTwo[0].Height.toFixed(2)}m)</p>`;
+        tideAfterNext.innerHTML = `<p class="remove-mb"><strong>${
+            nextTwo[1].EventType === "HighWater" ? "High Tide" : "Low Tide"
+        }</strong> at ${formatTime(
+            nextTwo[1].DateTime
+        )} (${nextTwo[1].Height.toFixed(2)}m)</p>`;
+    } catch (error) {
+        tideStatus.innerHTML = "Error loading tide data";
     }
-
-    catch (error) {
-      tideStatus.innerHTML="Error loading tide data";
-    }
-
 }
 
 // Run the function
 loadTideData();
-
 
 // function to change color of tide direction div
 // function toggleDivColor(tideDirection) {
