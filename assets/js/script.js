@@ -235,7 +235,7 @@ const tideStatus = document.getElementById("tide-status");
 //         Date: "2025-06-23T00:00:00",
 //     },
 
-    
+
 //     {
 //         EventType: "HighWater",
 //         DateTime: "2025-06-24T03:46:00",
@@ -385,20 +385,13 @@ async function loadTideData() {
     const direction = getTideDirection(nextTwo[0].EventType);
 
     // Display them
-    tideStatus.innerHTML = `<p><strong>${direction}</strong></p>`;
-    nextTide.innerHTML = `<p><strong>${
-        nextTwo[0].EventType === "HighWater" ? "High Tide" : "Low Tide"
-    }</strong> at ${formatTime(
-        nextTwo[0].DateTime
-    )} (${nextTwo[0].Height.toFixed(2)}m)</p>`;
-    tideAfterNext.innerHTML = `<p><strong>${
-        nextTwo[1].EventType === "HighWater" ? "High Tide" : "Low Tide"
-    }</strong> at ${formatTime(
-        nextTwo[1].DateTime
-    )} (${nextTwo[1].Height.toFixed(2)}m)</p>`;
+      tideStatus.innerHTML = `<p class="remove-mb"><strong>${direction}</strong></p>`
+      nextTide.innerHTML = `<p class="remove-mb"><strong>${nextTwo[0].EventType === "HighWater" ? "High Tide" : "Low Tide"}</strong> at ${formatTime(nextTwo[0].DateTime)} (${nextTwo[0].Height.toFixed(2)}m)</p>`
+      tideAfterNext.innerHTML = `<p class="remove-mb"><strong>${nextTwo[1].EventType === "HighWater" ? "High Tide" : "Low Tide"}</strong> at ${formatTime(nextTwo[1].DateTime)} (${nextTwo[1].Height.toFixed(2)}m)</p>`
+
 
     }
-  
+
     catch (error) {
       tideStatus.innerHTML="Error loading tide data";
     }
@@ -407,3 +400,9 @@ async function loadTideData() {
 
 // Run the function
 loadTideData();
+
+
+// function to change color of tide direction div
+// function toggleDivColor(tideDirection) {
+//   if (tideStatus === )
+// }
