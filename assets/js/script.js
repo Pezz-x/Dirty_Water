@@ -328,7 +328,7 @@ function getTideDirection(nextTideType) {
 }
 
 function loadTideData() {
-  
+
     // Get only events for today
     const today = getTodayDate();
     const todayEvents = tideData.filter(event => event.DateTime.startsWith(today));
@@ -355,11 +355,17 @@ function loadTideData() {
     const direction = getTideDirection(nextTwo[0].EventType);
 
     // Display them
-      tideStatus.innerHTML = `<p><strong>${direction}</strong></p>`
-      nextTide.innerHTML = `<p><strong>${nextTwo[0].EventType === "HighWater" ? "High Tide" : "Low Tide"}</strong> at ${formatTime(nextTwo[0].DateTime)} (${nextTwo[0].Height.toFixed(2)}m)</p>`
-      tideAfterNext.innerHTML = `<p><strong>${nextTwo[1].EventType === "HighWater" ? "High Tide" : "Low Tide"}</strong> at ${formatTime(nextTwo[1].DateTime)} (${nextTwo[1].Height.toFixed(2)}m)</p>`
+      tideStatus.innerHTML = `<p class="remove-mb"><strong>${direction}</strong></p>`
+      nextTide.innerHTML = `<p class="remove-mb"><strong>${nextTwo[0].EventType === "HighWater" ? "High Tide" : "Low Tide"}</strong> at ${formatTime(nextTwo[0].DateTime)} (${nextTwo[0].Height.toFixed(2)}m)</p>`
+      tideAfterNext.innerHTML = `<p class="remove-mb"><strong>${nextTwo[1].EventType === "HighWater" ? "High Tide" : "Low Tide"}</strong> at ${formatTime(nextTwo[1].DateTime)} (${nextTwo[1].Height.toFixed(2)}m)</p>`
 
 }
 
 // Run the function
 loadTideData();
+
+
+// function to change color of tide direction div
+// function toggleDivColor(tideDirection) {
+//   if (tideStatus === )
+// }
