@@ -351,17 +351,21 @@
 
     <!-- Contact Section -->
     <section id="contact" class="text-center pb-5 d-flex align-items-center" aria-label="contact">
-        <div class="container text-center py-3 mb-auto">
+        <div class="container text-center py-3 mb-auto col-12 col-md-4 col-lg-4">
             <h3 class=>~ Contact ~</h3>
-            <form>
+            <form id="contact-form" novalidate>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Name" />
+                    <input type="text" class="form-control" id="contact-name" placeholder="Name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
                 </div>
                 <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Email" />
+                    <input type="email" class="form-control" id="contact-email" placeholder="Email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                    <textarea class="form-control" id="contact-message" rows="5" placeholder="Message"
+                        required></textarea>
+                    <div class="invalid-feedback">Please enter your message.</div>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
