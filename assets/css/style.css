@@ -44,6 +44,9 @@ p {
 #navbar * {
     color: var(--light-font-color);
 }
+.navbar-toggler {
+    border-color: var(--light-font-color);
+}
 
 /* Hero Section */
 #hero {
@@ -157,10 +160,6 @@ p {
     /* background-color: #f8f9fa; */
     /* border: 2px solid black; */
     /* Light background for table */
-}
-#tide-times .row > * {
-    border: 2px solid black;
-    background-color: var(--light-font-color);
 }
 
 .table-container .fw-bold {
