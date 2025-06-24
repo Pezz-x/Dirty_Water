@@ -8,7 +8,7 @@
 
 ---
 
-![Wireframes](/assets/images/DirtyWater%20-%20wireframe.png)
+![Responsive](/assets/images/Responsive_image2.png)
 
 ---
 
@@ -77,9 +77,11 @@ Found in the project board here: [Project Board](https://github.com/users/Pezz-x
 
 ## __Future features of Dirty Water we decided were not for MVP__
 
-Length of discharge (time) including avg litres 
-	- traffic lights based on litres discharged
-      - create a script to easily contact/complain to water company and MP
+    - use API for tide data (not possible for MVP as github pages not whitelisted)
+    - show yellow warning for discharge made in past 24 hours on the map
+    - display multiple tide locations and status in map
+    - display tide tide and status closest to discharge point in map
+
 
 
 ---
@@ -92,7 +94,7 @@ Wireframes were created to help visualise the user journey and final product. Bo
 
 <img>
 
-![Wireframe](/assets/images/...) !
+![Wireframes](/assets/images/DirtyWater%20-%20wireframe.png)
 
  ### __Colour Palette__
 ![Colour palette](/assets/images...) !
