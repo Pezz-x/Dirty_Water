@@ -49,19 +49,6 @@ async function initMap() {
                 });
 
                 if (status === 1) {
-                    const marker = new google.maps.Marker({
-                        position: { lat: lat, lng: lng },
-                        map: map,
-                        title: `ID: ${attrs.ID}\nStatus: ${attrs.status}`,
-                        icon: {
-                            path: google.maps.SymbolPath.CIRCLE,
-                            scale: 8,
-                            fillColor: color,
-                            fillOpacity: 0.2,
-                            strokeWeight: 0,
-                            strokeColor: "black",
-                        },
-                    });
                     let growing = true;
                     let scale = 8;
                     setInterval(() => {
@@ -76,8 +63,8 @@ async function initMap() {
                             path: google.maps.SymbolPath.CIRCLE,
                             scale: scale,
                             fillColor: color,
-                            fillOpacity: 0.2,
-                            strokeWeight: 0,
+                            fillOpacity: 0.8,
+                            strokeWeight: 0.5,
                             strokeColor: "black",
                         });
                     }, 50);
