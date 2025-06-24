@@ -80,6 +80,7 @@ p {
     background-color: var(--secondary-color);
     color: #fff;
 }
+
 #modal-btn:hover {
     background-color: var(--light-blue-color);
     color: var(--secondary-color);
