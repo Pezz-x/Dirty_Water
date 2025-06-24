@@ -44,6 +44,9 @@ p {
 #navbar * {
     color: var(--light-font-color);
 }
+.navbar-toggler {
+    border-color: var(--light-font-color);
+}
 
 /* Hero Section */
 #hero {
