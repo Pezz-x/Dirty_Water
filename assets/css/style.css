@@ -70,7 +70,23 @@ p {
 }
 .modal-body input,
 .modal-body select {
-    background-color: rgba(242, 242, 124, 0.622);
+    background-color: rgba(245, 222, 179, 0.785);
+}
+/* Modal Button */
+#modal-btn {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+#modal-btn:hover {
+    background-color: var(--light-blue-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+#modal-btn:active {
+    background-color: var(--secondary-color);
+    color: #fff;
 }
 .modal-footer {
     background-color: var(--secondary-color);
