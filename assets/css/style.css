@@ -111,7 +111,7 @@ p {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 1.5rem 0;
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
