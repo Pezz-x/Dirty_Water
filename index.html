@@ -31,13 +31,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#map">Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#take-action">Take Action</a></li>
                     <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resources">Resources</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -91,6 +88,10 @@
                                         <label for="email" class="form-label">Email</label>
                                         <input class="form-control mb-2" id="email" name="email" type="email" required
                                             aria-required="true" />
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="postcode" class="form-label">Postcode</label>
+                                        <input class="form-control mb-2" id="postcode" name="postcode" type="text" required aria-required="true" autocomplete="postal-code"/>
                                     </div>
                                 </div>
                                 <button id="modal-btn" class="btn mt-2" type="submit">
@@ -182,7 +183,7 @@
 
     <!--Take Action Section -->
     <!--
-      The "Take Action" section intentionally uses flip cards to draw attention, encourage user interaction with action items.
+    The "Take Action" section intentionally uses flip cards to draw attention, encourage user interaction with action items.
     highlight important resources, promote engagement.
     -->
     <section id="take-action" aria-label="take action" class="pb-5">

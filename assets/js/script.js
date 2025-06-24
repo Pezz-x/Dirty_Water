@@ -4,6 +4,7 @@ async function initMap() {
 
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 9,
+        streetViewControl: false,
         center: cornwallCenter,
     });
 
@@ -174,6 +175,9 @@ async function loadTideData() {
         // Determine if tide is coming in or out
         const direction = getTideDirection(nextTwo[0].EventType);
 
+        // Calling function to change color of tideStatus div
+        toggleDivColor(nextTwo[0].EventType);
+
         // Display them
         tideStatus.innerHTML = `<p class="remove-mb"><strong>${direction}</strong></p>`;
         nextTide.innerHTML = `<p class="remove-mb"><strong>${
@@ -194,10 +198,19 @@ async function loadTideData() {
 // Run the function
 loadTideData();
 
-// function to change color of tide direction div
-// function toggleDivColor(tideDirection) {
-//   if (tideStatus === )
-// }
+// function to change color of tideStatus div
+function toggleDivColor(tideEvent) {
+  if (tideEvent === "HighWater") {
+    tideStatus.style.backgroundColor = "#ffc107";
+  }
+  else if (tideEvent === "LowWater") {
+    tideStatus.style.backgroundColor = "#396d39";
+  }
+  else {
+    tideStatus.style.backgroundColor = "#ebeae8";
+  }
+};
+
 document
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
