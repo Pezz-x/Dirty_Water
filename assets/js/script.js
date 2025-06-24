@@ -157,12 +157,6 @@ async function loadTideData() {
 
         const data = await response.json();
 
-        // Get only events for today
-        const today = getTodayDate();
-        const todayEvents = data.filter((event) =>
-            event.DateTime.startsWith(today)
-        );
-
         // Get current time
         const now = new Date();
 
@@ -201,13 +195,13 @@ loadTideData();
 // function to change color of tideStatus div
 function toggleDivColor(tideEvent) {
   if (tideEvent === "HighWater") {
-    tideStatus.style.backgroundColor = "#ffc107";
+    tideStatus.style.backgroundColor = "#ffc107"; // Tide incoming = red
   }
   else if (tideEvent === "LowWater") {
-    tideStatus.style.backgroundColor = "#0fbe0fd2";
+    tideStatus.style.backgroundColor = "#0fbe0fd2"; // Tide outgoing = green
   }
   else {
-    tideStatus.style.backgroundColor = "#ebeae8";
+    tideStatus.style.backgroundColor = "#ebeae8"; // If unable to retrieve tide data = white
   }
 };
 
