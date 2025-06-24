@@ -93,7 +93,7 @@
                                             aria-required="true" />
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-secondary mt-2" type="submit">
+                                <button id="modal-btn" class="btn mt-2" type="submit">
                                     Submit!
                                 </button>
                             </form>
@@ -127,19 +127,7 @@
             </div>
         </div>
     </section>
-    <!-- Tide Section -->
-    <section id="tide-times" class="text-center pb-5 d-flex align-items-center" aria-label="tide times">
-        <div class="container d-flex justify-content-center">
-            <div class="table-container col-8">
-                <div id="tide-table" class="row text-center py-2">
-                    <div class="col-12 fw-bold py-2 remove-mb">Cornwall Tide Times:</div>
-                    <div id="next-tide" class="col-6 py-2"></div>
-                    <div id="tide-after-next" class="col-6 py-2"></div>
-                    <div id="tide-status" class="col-12 py-2"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- Warning Section -->
     <section id="warning" class="container d-flex align-items-center" aria-label="Important map disclaimer">
         <div class="col-lg-11 mx-auto">
@@ -152,7 +140,7 @@
     </section>
 
     <!-- Google Map Section -->
-    <section id="mapContainer" class="container d-flex align-items-center pb-5"
+    <section id="mapContainer" class="container d-flex align-items-center"
         aria-label="Map showing sewage overflow locations">
         <div id="map"></div>
 
@@ -164,6 +152,19 @@
             async defer></script>
     </section>
 
+    <!-- Tide Section -->
+    <section id="tide-times" class="text-center pb-5 d-flex align-items-center" aria-label="tide times">
+        <div class="container d-flex justify-content-center">
+            <div class="table-container col-8">
+                <div id="tide-table" class="row text-center pb-2">
+                    <div class="col-12 fw-bold py-2 remove-mb">Cornwall Tide Times:</div>
+                    <div id="next-tide" class="col-6 py-2"></div>
+                    <div id="tide-after-next" class="col-6 py-2"></div>
+                    <div id="tide-status" class="col-12 py-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!--Take Action Section -->
@@ -406,11 +407,6 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <!-- Footer Text -->
-                <div>
-                    <p class="header pt-3 mb-1">Dirty Water</p>
-                    <p class="copyright mb-0"><em>© Dirty Water</em></p>
                 </div>
             </div>
         </div>
