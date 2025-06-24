@@ -1,1 +1,166 @@
-# Dirty_Water
+# Dirty_Water# Project Proposal: Sewage Discharge Awareness Website
+
+## Project Overview
+
+**Project Name:** *Dirty Water*  
+
+**Objective:** Build a public-facing website that empowers people to make informed decisions about when and where it’s safe to swim, surf, paddleboard, or walk near coastal or river water, based on near-time sewage discharge data.
+
+---
+
+![Responsive](/assets/images/Responsive_image2.png)
+
+---
+
+## Target Audience
+
+This site is for:
+
+- Environmentally conscious individuals
+- Families with children
+- Surfers, swimmers, and dog walkers
+- Outdoor enthusiasts
+- Local community groups
+- Anyone who wants to avoid unnecessary health risks from polluted water
+
+---
+
+## Idea
+
+**Problem:**  
+Sewage is often discharged into rivers and the sea during storms or system overloads, but this information is often hard to understand, does not give advice or allows users to easily complain to local water companies.
+
+**Solution:**  
+Create a simple, mobile-friendly website where users can check recent sewage discharge events at their local river or beach, learn about the risks, and take action if they wish.
+
+---
+
+##  Core Features
+
+1. ** Interactive Map**  
+   A responsive map interface centered on Cornwall (for now) showing:
+   - Sewage outflow points
+   - Intuitive interface to show if discharge has happened or not (event in the past 24 hours or not)
+
+2. ** Sewage Discharge Points**  
+   Each point on the map includes:
+   - Location name
+   - Last known discharge event (with date/time)
+   - Length of discharge (time)
+
+3. ** Navigation Bar**  
+   Simple top navigation for:
+   - Home / Map
+   - About
+   - FAQs
+   - Contact
+
+4. ** Hero Image**  
+   A powerful landing page image with a short mission statement and call-to-action button.
+
+5. ** FAQs Page**  
+   - What is sewage discharge?
+   - Is it legal?
+   - What are the health risks?
+   - Etc.
+
+6. ** Take Action Section**  
+   - Links to local water authorities
+   - Link to South West Water website
+
+
+## __Detailed user stories with acceptance criteria__
+
+Found in the project board here: [Project Board](https://github.com/users/Pezz-x/projects/4)
+
+
+
+## __Future features of Dirty Water we decided were not for MVP__
+
+    - use API for tide data (not possible for MVP as github pages not whitelisted)
+    - show yellow warning for discharge made in past 24 hours on the map
+    - display multiple tide locations and status in map
+    - display tide tide and status closest to discharge point in map
+
+
+
+---
+
+
+## __Design Documentation__
+
+### __Wireframes__
+Wireframes were created to help visualise the user journey and final product. Both mobile and desktop wireframes were developed.
+
+<img>
+
+![Wireframes](/assets/images/DirtyWater%20-%20wireframe.png)
+
+ ### __Colour Palette__
+![Colour palette](/assets/images...) !
+
+This palette was selected...
+
+### __Topography__
+- Montserrat and Lexend font was used throughout for consistency. These fonts are considered...
+
+### __Image generation__
+Images are all stock images free to downloaded and use from [TBC](https://www.[website].com/)
+
+
+## Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Mapping:** TBD (ArcGIS API with sewage discharge JSON)
+- **Hosting:** GitHub Pages
+
+## __Testing__
+
+### __Code Validation__
+
+All HTML and CSS code was validated using the W3C Markup Validation Service and W3C CSS Validation Service. The results are as follows:
+
+__HTML Validation:__
+- X errors...
+
+![html validator](/assets/images...)
+
+__CSS Validation:__
+- No errors were found in the CSS code.
+
+### __Lighthouse Testing__
+
+Lighthouse was used to test the performance and accessibility. The results are as follows:
+
+__Index.html:__
+    - Performance impacted by image sizes in the header. The other scores are all good.
+
+![Lighthouse Report](/assets/images/Lighthouse...)
+
+__Other pages__
+
+![Lighthouse Report](/assets/images...)
+
+- All other pages have the same scores at index/html
+
+
+### __Deployment__
+
+This project was deployed on GitHub. Below are the steps followed to deploy the website:
+1. In the GitHub repository, navigate to the Settings tab.
+2. Scroll down until GitHub Pages is found.
+3. From the source section drop-down menu, select the main branch.
+4. Once the main branch has been selected, hit the save button.
+5. Finally, when the page is refreshed, a detailed ribbon display will indicate the successful deployment. 
+
+
+### Credits
+
+- [Google Fonts](https://fonts.google.com/) for typography.
+- [Coolors.co](https://coolors.co/) for palette selection.
+- [Font Awesome](https://fontawesome.com/) for icons used within the website.
+- [Microsoft Copilot](https://copilot.microsoft.com/) for image and text generation.
+- [Bootstrap](https://getbootstrap.com/) for the framework.
+- [Am I Responsive](https://ui.dev/amiresponsive) for design example in this README.
+
+
