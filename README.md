@@ -77,10 +77,10 @@ Found in the project board here: [Project Board](https://github.com/users/Pezz-x
 
 ## __Future features of Dirty Water we decided were not for MVP__
 
-    - use API for tide data (not possible for MVP as github pages not whitelisted)
-    - show yellow warning for discharge made in past 24 hours on the map
-    - display multiple tide locations and status in map
-    - display tide tide and status closest to discharge point in map
+   - use API for tide data (not possible for MVP as github pages not whitelisted)
+    - show a yellow warning on the map for discharges made in the past 24 hours
+   - display multiple tide locations and status in map
+   - display tide tide and status closest to discharge point in map
 
 
 
