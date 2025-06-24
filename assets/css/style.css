@@ -105,6 +105,36 @@ p {
 #map {
     border: 3px solid black;
 }
+/* Map key Section */
+#pump-Offline {
+    display:inline-block;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:#8F8F94;
+    border:0.2rem solid #000000;
+    margin-right:8px;
+}
+
+#pump-Not-Discharging {
+    display:inline-block;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:#00FF60;
+    border:0.2rem solid #000000;
+    margin-right:8px;
+}
+
+#Discharging {
+    display:inline-block;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:#EA0C00;
+    border:0.2rem solid #000000;
+    margin-right:8px;
+}
 
 /* Tide Times */
 .remove-mb {
