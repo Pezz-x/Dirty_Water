@@ -62,7 +62,7 @@
                     </div>
                     <div class="modal-body mb-0">
                         <div class="container-fluid">
-                            <form action="javascript:alert('from submitted');" method="GET"
+                            <form action="javascript:alert('form submitted');" method="GET"
                                 class="d-flex flex-column justify-content-center align-items-center">
                                 <div class="row">
                                     <div class="col-12">
@@ -80,7 +80,7 @@
                                             required aria-required="true">
                                     </div>
                                     <div class="col-6">
-                                        <label for="name" class="form-label">Last Name</label>
+                                        <label for="last-name" class="form-label">Last Name</label>
                                         <input class="form-control mb-2" id="last-name" name="last-name" type="text"
                                             required aria-required="true">
                                     </div>
@@ -152,17 +152,17 @@
     </section>
 
     <!-- Map Key Section -->
-    <div id="map-key" class="d-flex justify-content-center align-items-center flex-wrap">
-        <div class="map-key-item" aria-label="Grey dot for Offline">
-            <span class="map-key-circle offline"></span>
+    <div id="map-key" class="d-flex justify-content-center align-items-center flex-wrap" aria-label="Map key showing symbol meanings" role="region">
+        <div class="map-key-item">
+            <span class="map-key-circle offline" aria-hidden="true"></span>
             <span class="map-key-label">Offline</span>
         </div>
-        <div class="map-key-item" aria-label="Green dot for Not Discharging">
-            <span class="map-key-circle not-discharging"></span>
+        <div class="map-key-item">
+            <span class="map-key-circle not-discharging" aria-hidden="true"></span>
             <span class="map-key-label">Not Discharging</span>
         </div>
-        <div class="map-key-item" aria-label="Red dot for Discharging">
-            <span class="map-key-circle discharging"></span>
+        <div class="map-key-item">
+            <span class="map-key-circle discharging" aria-hidden="true"></span>
             <span class="map-key-label">Discharging</span>
         </div>
     </div>
