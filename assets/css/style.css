@@ -106,34 +106,44 @@ p {
     border: 3px solid black;
 }
 /* Map key Section */
-#pump-Offline {
-    display:inline-block;
-    width:24px;
-    height:24px;
-    border-radius:50%;
-    background:#8F8F94;
-    border:0.2rem solid #000000;
-    margin-right:8px;
+#map-key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
 }
 
-#pump-Not-Discharging {
-    display:inline-block;
-    width:24px;
-    height:24px;
-    border-radius:50%;
-    background:#00FF60;
-    border:0.2rem solid #000000;
-    margin-right:8px;
+.map-key-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1rem;
+    min-width: 120px;
+    justify-content: center;
 }
 
-#Discharging {
-    display:inline-block;
-    width:24px;
-    height:24px;
-    border-radius:50%;
-    background:#EA0C00;
-    border:0.2rem solid #000000;
-    margin-right:8px;
+.map-key-circle {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 0.7em;
+    border: 2px solid #000000;
+    flex-shrink: 0;
+}
+
+.map-key-circle.offline {
+    background-color: #8F8F94;
+    border-color: #000000;
+}
+.map-key-circle.not-discharging {
+    background-color: #00FF60;
+    border-color: #000000;
+}
+.map-key-circle.discharging {
+    background-color: #EA0C00;
+    border-color: #000000;
 }
 
 /* Tide Times */
