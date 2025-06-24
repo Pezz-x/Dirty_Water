@@ -43,7 +43,7 @@ async function initMap() {
                         scale: 8,
                         fillColor: color,
                         fillOpacity: 0.8,
-                        strokeWeight: 0.1,
+                        strokeWeight: 0.5,
                         strokeColor: "black",
                     },
                 });

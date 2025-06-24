@@ -140,10 +140,8 @@
     </section>
 
     <!-- Google Map Section -->
-    <section id="mapContainer" class="container d-flex align-items-center pb-5"
-        aria-label="Map showing sewage overflow locations">
+    <section id="mapContainer" class="container d-flex align-items-center pb-5" aria-label="Map showing sewage overflow locations">
         <div id="map"></div>
-
         <!-- Load Google Maps API -->
         <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
         <!-- Replace YOUR_API_KEY with your actual Google Maps API key. -->
@@ -152,7 +150,21 @@
             async defer></script>
     </section>
 
-
+    <!-- Map Key Section -->
+    <div id="map-key" class="d-flex justify-content-center align-items-center flex-wrap">
+        <div class="map-key-item">
+            <span class="map-key-circle offline"></span>
+            <span class="map-key-label">Offline</span>
+        </div>
+        <div class="map-key-item">
+            <span class="map-key-circle not-discharging"></span>
+            <span class="map-key-label">Not Discharging</span>
+        </div>
+        <div class="map-key-item">
+            <span class="map-key-circle discharging"></span>
+            <span class="map-key-label">Discharging</span>
+        </div>
+    </div>
 
     <!--Take Action Section -->
     <!--
