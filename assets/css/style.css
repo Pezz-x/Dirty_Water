@@ -105,6 +105,46 @@ p {
 #map {
     border: 3px solid black;
 }
+/* Map key Section */
+#map-key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.map-key-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.map-key-circle {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 0.7em;
+    border: 2px solid #000000;
+    flex-shrink: 0;
+}
+
+.map-key-circle.offline {
+    background-color: #8F8F94;
+    border-color: #000000;
+}
+.map-key-circle.not-discharging {
+    background-color: #00FF60;
+    border-color: #000000;
+}
+.map-key-circle.discharging {
+    background-color: #EA0C00;
+    border-color: #000000;
+}
 
 /* Tide Times */
 .remove-mb {
