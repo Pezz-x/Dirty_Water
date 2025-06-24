@@ -137,7 +137,10 @@ p {
 }
 #tide-times .row > * {
     border: 2px solid black;
-    background-color: var(--light-font-color);
+    background-color:#e5e3df;
+}
+#tide-table .col-12 {
+    color: black;
 }
 
 .table-container .fw-bold {
