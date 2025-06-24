@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dirty Water</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <script>
         const queryUrl =
             "https://services-eu1.arcgis.com/OMdMOtfhATJPcHe3/arcgis/rest/services/NEH_outlets_PROD/FeatureServer/0/query?where=1%3D1&outFields=statusStart,latestEventStart,latestEventEnd,receivingWaterCourse,lastUpdated,ID,status,longitude,latitude&geometry=&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outSR=4326&f=json";
     </script>
     <!-- Styles sheet -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script type="module"
         src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"></script>
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
@@ -77,21 +77,21 @@
                                     <div class="col-6">
                                         <label for="first-name" class="form-label">First Name</label>
                                         <input class="form-control mb-2" id="first-name" name="first-name" type="text"
-                                            required aria-required="true" />
+                                            required aria-required="true">
                                     </div>
                                     <div class="col-6">
                                         <label for="name" class="form-label">Last Name</label>
                                         <input class="form-control mb-2" id="last-name" name="last-name" type="text"
-                                            required aria-required="true" />
+                                            required aria-required="true">
                                     </div>
                                     <div class="col-12">
                                         <label for="email" class="form-label">Email</label>
                                         <input class="form-control mb-2" id="email" name="email" type="email" required
-                                            aria-required="true" />
+                                            aria-required="true">
                                     </div>
                                     <div class="col-12">
                                         <label for="postcode" class="form-label">Postcode</label>
-                                        <input class="form-control mb-2" id="postcode" name="postcode" type="text" required aria-required="true" autocomplete="postal-code"/>
+                                        <input class="form-control mb-2" id="postcode" name="postcode" type="text" required aria-required="true" autocomplete="postal-code">
                                     </div>
                                 </div>
                                 <button id="modal-btn" class="btn mt-2" type="submit">
