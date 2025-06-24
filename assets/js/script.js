@@ -204,7 +204,7 @@ function toggleDivColor(tideEvent) {
     tideStatus.style.backgroundColor = "#ffc107";
   }
   else if (tideEvent === "LowWater") {
-    tideStatus.style.backgroundColor = "#396d39";
+    tideStatus.style.backgroundColor = "#0fbe0fd2";
   }
   else {
     tideStatus.style.backgroundColor = "#ebeae8";

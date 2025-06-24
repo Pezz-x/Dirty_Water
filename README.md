@@ -121,28 +121,32 @@ Hero image is a stock image taken from [Pexels](https://www.pexels.com/). Credit
 All HTML and CSS code was validated using the W3C Markup Validation Service and W3C CSS Validation Service. The results are as follows:
 
 __HTML Validation:__
-- X errors...
 
-![html validator](/assets/images...)
+- Initially when we ran the code through the HTML validator some warnings and errors were returned. There were warnings related to trailing slashes and some 'misuse of aria-label' warnings. There was one error related to a label's 'for' attribute not matching the corresponding input element's id.
+
+- The trailing slashes were mostly in the header meta-content and were the result of AI code generation. These were removed. The 'misuse of aria-label' were related to the map key. These were not necessary as the key also contained text which stated what it was showing. The aria-label's were removed. Instead, an aria-label was added and a 'role' attribute to explain what the section as a whole was doing. 'Aria-hidden' was added to the visual key elements to ensure there was no confusion for screen-readers.
+
+- The label and input element were amended so that they matched. The html validator showed no errors or warnings after these adjustments.
+
+![HTML Validator](assets/images/readmedocumentation/html-validator.png)
 
 __CSS Validation:__
+
 - No errors were found in the CSS code.
+
+![CSS Validator](assets/images/readmedocumentation/css-validator.png)
 
 ### __Lighthouse Testing__
 
-Lighthouse was used to test the performance and accessibility. The results are as follows:
+- Lighthouse was used to test the performance and accessibility. The results are as follows:
 
-__Index.html:__
-    - Performance impacted by image sizes in the header. The other scores are all good.
+- The original lighthouse report displayed some issues related to accessibility, best practices, SEO and particularly performance. To resolve the accessibility, best practices and SEO issues, a meta-description was added to the index.html page, accessibility-related attributes were reviewed, and some h5 elements were altered to h4 (to retain a sequentially-descending order of headers).
 
-![Lighthouse Report](/assets/images/Lighthouse...)
+- The hero-image was having the largest negative impact on the performance of the site. We tried converting the image from jpg to webp format but this unexpectedly *increased* the file size. Instead, we cropped the size of the image using the inbuilt [Preview](https://support.apple.com/en-gb/guide/preview/welcome/mac) for Mac, then we compressed the image using an online image compressor tool: [Squoosh](https://squoosh.app/). This significantly improved performance.
 
-__Other pages__
+- Lighthouse also suggested removing unused JavaScript and CSS. However, on closer inspection this was all being imported from libraries / frameworks (such as Bootstrap and Font Awesome) which we used in the webpage.
 
-![Lighthouse Report](/assets/images...)
-
-- All other pages have the same scores at index/html
-
+![Lighthouse Test Results](assets/images/readmedocumentation/lighthouse-test.png)
 
 ### __Deployment__
 
