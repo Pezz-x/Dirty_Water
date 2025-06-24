@@ -8,7 +8,7 @@
     --light-font-color: wheat;
     --secondary-light-font-color: #fafafa;
     --dark-font-color: #333;
-    --secondary-dark-font-color: wheat;
+    --wheat-font-color: wheat;
     --light-blue-color: #61979e;
     --primary-font: "Montserrat", sans-serif;
     --secondary-font: "Lexend", sans-serif;
@@ -137,7 +137,7 @@ p {
 }
 #tide-times .row > * {
     border: 2px solid black;
-    background-color:#e5e3df;
+    background-color:#ebeae8;
 }
 #tide-table .col-12 {
     color: black;
