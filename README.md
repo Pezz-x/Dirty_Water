@@ -37,36 +37,39 @@ Create a simple, mobile-friendly website where users can check recent sewage dis
 
 ##  Core Features
 
-1. ** Interactive Map**
+1. **Interactive Map**
    A responsive map interface centered on Cornwall (for now) showing:
    - Sewage outflow points
    - Intuitive interface to show if discharge is happening, is not happening or offline
 
-2. ** Sewage Discharge Points**
+2. **Sewage Discharge Points**
    Each point on the map includes:
    - Location name
    - Last known discharge event (with date/time)
    - Length of discharge (time)
 
-3. ** Navigation Bar**
+3. **Navigation Bar**
    Simple top navigation for:
    - Home / Map
    - About
    - FAQs
    - Contact
 
-4. ** Hero Image**
+4. **Hero Image**
    A powerful landing page image with a short mission statement and call-to-action button.
 
-5. ** FAQs Page**
+5. **FAQs Page**
    - What is sewage discharge?
    - Is it legal?
    - What are the health risks?
    - Etc.
 
-6. ** Take Action Section**
+6. **Take Action Section**
    - Links to local water authorities
    - Link to South West Water website
+
+7. **Tide Table**
+   Tide table beneath the map displaying the two upcoming tidal events and a colour coded cell displaying whether the tide is outgoing or incoming.
 
 
 ## __Detailed user stories with acceptance criteria__
@@ -78,11 +81,24 @@ Found in the project board here: [Project Board](https://github.com/users/Pezz-x
 ## __Future features of Dirty Water we decided were not for MVP__
 
    - use API for tide data (not possible for MVP as github pages not whitelisted)
-    - show a yellow warning on the map for discharges made in the past 24 hours
+   - show a yellow warning on the map for discharges made in the past 24 hours
    - display multiple tide locations and status in map
    - display tide tide and status closest to discharge point in map
+   - Registration modal: takes users postcode / location, compares this location to currently discharging pipes, and sends the user an alert email if their location is within a certain radius of currently discharging pipes. This functionality could also be expanded to enable users to input their favourite / most visited beaches and swim spots.
+   - Complaints: functionality to enable users to send automated complaints to South West Water or their local MPs.
 
+## __Issues and Compromises:__
+   We encountered issues when implementing the Admiralty API for tidal data. Once we had written the JavaScript to fetch the data from the API and display it in our tide table, the following error displayed in the console:
 
+   - Access to fetch at 'https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/0546/TidalEvents?duration=1' from origin 'http://127.0.0.1:5500' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+   The issue was that the Admiralty API does not allow client-side CORS requests from browsers. It's designed for server-side use (e.g. Node.js, Python, etc.), not directly from HTML + JavaScript in the browser. Even with a subscription, this could not be bypassed. This was a learning experience for us because we did not expect to encounter this obstacle and it was frustrating after so much time had been invested in finding the API, decoding it's documentation (which wasn't especially clear) and setting up the JavaScript code.
+
+   We explored other options for getting around this such as building a small proxy server using node.js to receive the API data and serve our website. However, further research revealed that this was beyond the scope of this project as GitHub Pages (our website host) only serves static files (e.g. HTML, CSS, JS) and doesn't support running a node.js server directly.
+
+   Therefore, we explored alternative tidal APIs which allow client-side CORS requests from browsers. However, the only tidal APIs which fitted this criteria didn't meet the website specifications (they only showed the next tidal height reading - they didn't display tidal events (e.g. Low/High Tide), which is what we needed).
+
+   Instead, we landed on a temporary solution which, while not ideal, was OK for the purposes of the website. We used our initial API to generate the tidal data we needed for the next few days (which was possible on their website), and then saved this data into a local JSON file which we could then retrieve using almost exactly the same JavaScript code we had been using before.
 
 ---
 
