@@ -111,7 +111,8 @@ Hero image is a stock image taken from [Pexels](https://www.pexels.com/). Credit
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Mapping:** TBD (ArcGIS API with sewage discharge JSON)
+- **Mapping:** ArcGIS API with sewage discharge JSON
+- **Tide times:** JSON file, data from Admiralty Tidal API
 - **Hosting:** GitHub Pages
 
 ## __Testing__
